@@ -1,0 +1,1 @@
+# simple-wordle-web
