@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import OtpInput from "react-otp-input";
 
-import "./input-group.module.scss"
+import styles from "./input-group.module.scss";
 
 function InputGroup() {
   const [value, setValue] = useState<string>("");
@@ -12,8 +12,8 @@ function InputGroup() {
         setValue(e);
       }}
       numInputs={5}
-      separator={<span>-</span>}
-      inputStyle="input__group__item"
+      containerStyle={styles.input__group__container}
+      inputStyle={styles.input__group__item}
     />
   );
 }
