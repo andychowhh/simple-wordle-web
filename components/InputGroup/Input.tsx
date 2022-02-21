@@ -1,9 +1,9 @@
 import React, { useState } from "react";
 import OtpInput from "react-otp-input";
 
-import styles from "./input-group.module.scss";
+import styles from "./input.module.scss";
 
-function InputGroup() {
+function Input() {
   const [value, setValue] = useState<string>("");
   return (
     <OtpInput
@@ -18,4 +18,4 @@ function InputGroup() {
   );
 }
 
-export default InputGroup;
+export default Input;
