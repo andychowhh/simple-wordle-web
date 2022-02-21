@@ -12,8 +12,8 @@ function Input() {
         setValue(e);
       }}
       numInputs={5}
-      containerStyle={styles.input__group__container}
-      inputStyle={styles.input__group__item}
+      containerStyle={styles.input__container}
+      inputStyle={styles.input__item}
     />
   );
 }
