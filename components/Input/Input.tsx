@@ -3,12 +3,17 @@ import OtpInput from "react-otp-input";
 
 import styles from "./input.module.scss";
 
-function Input() {
-  const [value, setValue] = useState<string>("");
+type InputPropType = {
+  value: string;
+  setValue: (event: React.ChangeEvent<HTMLInputElement>) => void;
+};
+
+function Input(props: InputPropType): JSX.Element {
+  const { value, setValue } = props;
   return (
     <OtpInput
       value={value}
-      onChange={(e: any) => {
+      onChange={(e: React.ChangeEvent<HTMLInputElement>) => {
         setValue(e);
       }}
       numInputs={5}
