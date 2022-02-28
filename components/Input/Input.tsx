@@ -19,6 +19,7 @@ function Input(props: InputPropType): JSX.Element {
       numInputs={5}
       containerStyle={styles.input__container}
       inputStyle={styles.input__item}
+      data-testid={`input`}
     />
   );
 }
