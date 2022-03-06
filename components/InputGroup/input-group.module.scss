@@ -1,0 +1,7 @@
+.input__group {
+  display: grid;
+  justify-content: center;
+  column-gap: 10px;
+  margin: 20px auto;
+  grid-template-columns: auto auto auto auto auto;
+}

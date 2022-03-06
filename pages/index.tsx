@@ -1,8 +1,8 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 
 import type { NextPage } from "next";
 
-import Input from "@/components/Input/Input";
+import InputGroup from "@/components/InputGroup/InputGroup";
 
 import "@/styles/Home.module.scss";
 
@@ -19,25 +19,28 @@ const Home: NextPage = () => {
     { id: 3, value: "" },
     { id: 4, value: "" },
   ]);
-  const InputGroup = (): JSX.Element => {
-    let numOfInputs: number = 5;
-    var rows: Array<any> = [];
-    for (var i = 0; i < numOfInputs; i++) {
-      let inputValue: InputValueType = inputValues[i];
-      rows.push(
-        <Input
-          key={inputValue.id}
-          value={inputValue.value}
-          setValue={(e: React.ChangeEvent<HTMLInputElement>) => {
-            let inputValuesTemp = inputValues;
-            inputValuesTemp[i]["value"] = e.target.value;
-            setInputValues(inputValuesTemp);
-          }}
-        />
-      );
-    }
-    return <>{rows}</>;
-  };
+
+  // const InputGroup = (): JSX.Element => {
+  //   let numOfInputs: number = 5;
+  //   var rows: Array<any> = [];
+  //   for (var i = 0; i < numOfInputs; i++) {
+  //     let inputValue: InputValueType = inputValues[i];
+  //     rows.push(
+  //       <Input
+  //         key={inputValue.id}
+  //         value={inputValue.value}
+  //         setValue={(event:string) => {
+  //           let inputValuesTemp = inputValues;
+  //           inputValuesTemp[i]["value"] += event;
+  //           console.log(inputValuesTemp)
+  //           setInputValues(inputValuesTemp);
+  //         }}
+  //       />
+  //     );
+  //   }
+  //   return <>{rows}</>;
+  // };
+
   return (
     <div className="container">
       <InputGroup />
