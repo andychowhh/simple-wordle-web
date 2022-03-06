@@ -11,7 +11,7 @@ type InputValueType = {
   value: string;
 };
 
-const Home: NextPage = () => {
+const InputGroup = (): JSX.Element => {
   const [inputValues, setInputValues] = useState<Array<InputValueType>>([
     { id: 0, value: "" },
     { id: 1, value: "" },
@@ -19,25 +19,26 @@ const Home: NextPage = () => {
     { id: 3, value: "" },
     { id: 4, value: "" },
   ]);
-  const InputGroup = (): JSX.Element => {
-    let numOfInputs: number = 5;
-    var rows: Array<any> = [];
-    for (var i = 0; i < numOfInputs; i++) {
-      let inputValue: InputValueType = inputValues[i];
-      rows.push(
-        <Input
-          key={inputValue.id}
-          value={inputValue.value}
-          setValue={(e: React.ChangeEvent<HTMLInputElement>) => {
-            let inputValuesTemp = inputValues;
-            inputValuesTemp[i]["value"] = e.target.value;
-            setInputValues(inputValuesTemp);
-          }}
-        />
-      );
-    }
-    return <>{rows}</>;
-  };
+  let numOfInputs: number = 5;
+  var rows: Array<any> = [];
+  for (let i = 0; i < numOfInputs; i++) {
+    let inputValue: InputValueType = inputValues[i];
+    rows.push(
+      <Input
+        key={inputValue.id}
+        value={inputValue.value}
+        setValue={(event: string) => {
+          let inputValuesTemp = [...inputValues];
+          inputValuesTemp[i]["value"] = event;
+          setInputValues(inputValuesTemp);
+        }}
+      />
+    );
+  }
+  return <>{rows}</>;
+};
+
+const Home: NextPage = () => {
   return (
     <div className="container">
       <InputGroup />

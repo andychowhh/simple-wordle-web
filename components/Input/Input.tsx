@@ -5,7 +5,7 @@ import styles from "./input.module.scss";
 
 type InputPropType = {
   value: string;
-  setValue: (event: React.ChangeEvent<HTMLInputElement>) => void;
+  setValue: (event: string) => void;
 };
 
 function Input(props: InputPropType): JSX.Element {
@@ -13,7 +13,7 @@ function Input(props: InputPropType): JSX.Element {
   return (
     <OtpInput
       value={value}
-      onChange={(e: React.ChangeEvent<HTMLInputElement>) => {
+      onChange={(e: string) => {
         setValue(e);
       }}
       numInputs={5}
