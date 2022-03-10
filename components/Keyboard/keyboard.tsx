@@ -14,12 +14,11 @@ const KeyboardWrapper: FunctionComponent<IProps> = ({
   onKeyPress,
   keyboardRef,
 }) => {
-  const [layoutName, setLayoutName] = useState("default");
 
   return (
     <Keyboard
       keyboardRef={(r) => (keyboardRef.current = r)}
-      layoutName={layoutName}
+      layoutName="default"
       onChange={onChange}
       onKeyPress={onKeyPress}
       onRender={() => console.log("Rendered")}
