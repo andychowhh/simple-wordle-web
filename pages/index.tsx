@@ -37,18 +37,35 @@ const Home: NextPage = () => {
 
   const onChangeInput = (event: string): void => {
     const inputValuesTemp = [...inputValues];
-    console.log(inputValuesTemp);
-    console.log(keyboard);
     if (inputValuesTemp[currentRow].value.length < 5) {
       inputValuesTemp[currentRow]["value"] = event;
       setInputValues(inputValuesTemp);
     }
   };
 
+  const onKeyPress = (button: string) => {
+    if (button === "{bksp}") {
+      const inputValuesTemp = [...inputValues];
+      let currentRowValue = inputValuesTemp[currentRow]["value"];
+      if (currentRowValue.length > 0) {
+        let updatedInputValuesTemp = currentRowValue.slice(
+          0,
+          -1
+        );
+        inputValuesTemp[currentRow]["value"] = updatedInputValuesTemp
+        setInputValues(inputValuesTemp);
+      }
+    }
+  };
+
   return (
     <div className="container">
       <InputGroup inputValues={inputValues} />
-      <KeyBoard keyboardRef={keyboard} onChange={onChangeInput} />
+      <KeyBoard
+        keyboardRef={keyboard}
+        onChange={onChangeInput}
+        onKeyPress={onKeyPress}
+      />
     </div>
   );
 };

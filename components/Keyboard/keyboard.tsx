@@ -5,20 +5,16 @@ import "react-simple-keyboard/build/css/index.css";
 
 interface IProps {
   onChange: any;
+  onKeyPress: any;
   keyboardRef: MutableRefObject<any>;
 }
 
 const KeyboardWrapper: FunctionComponent<IProps> = ({
   onChange,
+  onKeyPress,
   keyboardRef,
 }) => {
   const [layoutName, setLayoutName] = useState("default");
-
-  const onKeyPress = (button: string) => {
-    if (button === "{shift}" || button === "{lock}") {
-      setLayoutName(layoutName === "default" ? "shift" : "default");
-    }
-  };
 
   return (
     <Keyboard
