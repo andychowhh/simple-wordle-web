@@ -14,14 +14,13 @@ const KeyboardWrapper: FunctionComponent<IProps> = ({
   onKeyPress,
   keyboardRef,
 }) => {
-
   return (
     <Keyboard
       keyboardRef={(r) => (keyboardRef.current = r)}
       layoutName="default"
       onChange={onChange}
       onKeyPress={onKeyPress}
-      onRender={() => console.log("Rendered")}
+      maxLength={5}
     />
   );
 };

@@ -1,9 +1,13 @@
-import React, { useState, useEffect, useRef, ChangeEvent } from "react";
+import React, { useState } from "react";
 
 import type { NextPage } from "next";
 
+// Components
 import Input from "@/components/Input/Input";
 import KeyBoard from "@/components/Keyboard/keyboard";
+
+// Hooks
+import useKeyboard from "@/hooks/useKeyboard";
 
 import "@/styles/Home.module.scss";
 
@@ -25,44 +29,17 @@ const InputGroup = ({ inputValues }: InputGroupPropType): JSX.Element => {
 };
 
 const Home: NextPage = () => {
-  const [inputValues, setInputValues] = useState<Array<InputValueType>>([
-    { id: 0, value: "" },
-    { id: 1, value: "" },
-    { id: 2, value: "" },
-    { id: 3, value: "" },
-    { id: 4, value: "" },
-  ]);
   const [currentRow, setCurrentRow] = useState<number>(0);
-  const keyboard: any = useRef(null);
 
-  const onChangeInput = (event: string): void => {
-    const inputValuesTemp = [...inputValues];
-    if (inputValuesTemp[currentRow].value.length < 5) {
-      inputValuesTemp[currentRow]["value"] = event;
-      setInputValues(inputValuesTemp);
-    }
-  };
-
-  const onKeyPress = (button: string) => {
-    if (button === "{bksp}") {
-      const inputValuesTemp = [...inputValues];
-      let currentRowValue = inputValuesTemp[currentRow]["value"];
-      if (currentRowValue.length > 0) {
-        let updatedInputValuesTemp = currentRowValue.slice(
-          0,
-          -1
-        );
-        inputValuesTemp[currentRow]["value"] = updatedInputValuesTemp
-        setInputValues(inputValuesTemp);
-      }
-    }
-  };
+  const [inputValues, keyboardRef, onChangeInput, onKeyPress] = useKeyboard(
+    currentRow
+  );
 
   return (
     <div className="container">
       <InputGroup inputValues={inputValues} />
       <KeyBoard
-        keyboardRef={keyboard}
+        keyboardRef={keyboardRef}
         onChange={onChangeInput}
         onKeyPress={onKeyPress}
       />
