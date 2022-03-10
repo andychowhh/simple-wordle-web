@@ -1,8 +1,9 @@
-import React, { useState } from "react";
+import React, { useState, useEffect, useRef, ChangeEvent } from "react";
 
 import type { NextPage } from "next";
 
 import Input from "@/components/Input/Input";
+import KeyBoard from "@/components/Keyboard/keyboard";
 
 import "@/styles/Home.module.scss";
 
@@ -11,7 +12,19 @@ type InputValueType = {
   value: string;
 };
 
-const InputGroup = (): JSX.Element => {
+type InputGroupPropType = {
+  inputValues: Array<InputValueType>;
+};
+
+const InputGroup = ({ inputValues }: InputGroupPropType): JSX.Element => {
+  var rows: Array<any> = [];
+  inputValues.map((inputValue: InputValueType) => {
+    rows.push(<Input key={inputValue.id} value={inputValue.value} />);
+  });
+  return <>{rows}</>;
+};
+
+const Home: NextPage = () => {
   const [inputValues, setInputValues] = useState<Array<InputValueType>>([
     { id: 0, value: "" },
     { id: 1, value: "" },
@@ -19,29 +32,23 @@ const InputGroup = (): JSX.Element => {
     { id: 3, value: "" },
     { id: 4, value: "" },
   ]);
-  let numOfInputs: number = 5;
-  var rows: Array<any> = [];
-  for (let i = 0; i < numOfInputs; i++) {
-    let inputValue: InputValueType = inputValues[i];
-    rows.push(
-      <Input
-        key={inputValue.id}
-        value={inputValue.value}
-        setValue={(event: string) => {
-          let inputValuesTemp = [...inputValues];
-          inputValuesTemp[i]["value"] = event;
-          setInputValues(inputValuesTemp);
-        }}
-      />
-    );
-  }
-  return <>{rows}</>;
-};
+  const [currentRow, setCurrentRow] = useState<number>(0);
+  const keyboard: any = useRef(null);
 
-const Home: NextPage = () => {
+  const onChangeInput = (event: string): void => {
+    const inputValuesTemp = [...inputValues];
+    console.log(inputValuesTemp);
+    console.log(keyboard);
+    if (inputValuesTemp[currentRow].value.length < 5) {
+      inputValuesTemp[currentRow]["value"] = event;
+      setInputValues(inputValuesTemp);
+    }
+  };
+
   return (
     <div className="container">
-      <InputGroup />
+      <InputGroup inputValues={inputValues} />
+      <KeyBoard keyboardRef={keyboard} onChange={onChangeInput} />
     </div>
   );
 };
