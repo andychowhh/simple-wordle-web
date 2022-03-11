@@ -20,7 +20,8 @@ module.exports = {
     // Handle module aliases
     "^@/components/(.*)$": "<rootDir>/$1",
     "^@/styles/(.*)$": "<rootDir>/styles/$1",
-    "^@/hooks/(.*)$": "<rootDir>/hooks/$1"
+    "^@/hooks/(.*)$": "<rootDir>/hooks/$1",
+    "^@/constants/(.*)$": "<rootDir>/constants/$1"
   },
   setupFilesAfterEnv: ['<rootDir>/jest.setup.js'],
   // Add more setup options before each test is run

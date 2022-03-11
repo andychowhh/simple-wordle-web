@@ -8,6 +8,7 @@ import KeyBoard from "@/components/Keyboard/keyboard";
 
 // Hooks
 import useKeyboard from "@/hooks/useKeyboard";
+import useRandomWord from "@/hooks/useRandomWord";
 
 import "@/styles/Home.module.scss";
 
@@ -34,6 +35,7 @@ const Home: NextPage = () => {
   const [inputValues, keyboardRef, onChangeInput, onKeyPress] = useKeyboard(
     currentRow
   );
+  const selectedWord = useRandomWord();
 
   return (
     <div className="container">
