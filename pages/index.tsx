@@ -10,12 +10,11 @@ import KeyBoard from "@/components/Keyboard/keyboard";
 import useKeyboard from "@/hooks/useKeyboard";
 import useRandomWord from "@/hooks/useRandomWord";
 
-import "@/styles/Home.module.scss";
+// Types
+import {InputValueType} from "@/types/types"
 
-type InputValueType = {
-  id: number;
-  value: string;
-};
+// Styles
+import "@/styles/Home.module.scss";
 
 type InputGroupPropType = {
   inputValues: Array<InputValueType>;

@@ -1,10 +1,7 @@
 import React, { useState, useRef } from "react";
 import {wordCompare} from "@/utils/utils"
 
-type InputValueType = {
-  id: number;
-  value: string;
-};
+import {InputValueType} from "@/types/types"
 
 function useKeyboard(currentRow: number, selectedWord: string) {
   const [inputValues, setInputValues] = useState<Array<InputValueType>>([
