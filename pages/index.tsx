@@ -32,10 +32,10 @@ const InputGroup = ({ inputValues }: InputGroupPropType): JSX.Element => {
 const Home: NextPage = () => {
   const [currentRow, setCurrentRow] = useState<number>(0);
 
-  const [inputValues, keyboardRef, onChangeInput, onKeyPress] = useKeyboard(
-    currentRow
-  );
   const selectedWord = useRandomWord();
+  const [inputValues, keyboardRef, onChangeInput, onKeyPress] = useKeyboard(
+    currentRow, selectedWord
+  );
 
   return (
     <div className="container">

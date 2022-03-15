@@ -14,7 +14,7 @@ function useRandomWord() {
     setWord(randomWord);
   }, []);
 
-  return [word];
+  return word;
 }
 
 export default useRandomWord;
