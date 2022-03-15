@@ -1,4 +1,5 @@
 import React, { useState, useRef } from "react";
+import {wordCompare} from "@/utils/utils"
 
 type InputValueType = {
   id: number;
@@ -37,13 +38,8 @@ function useKeyboard(currentRow: number, selectedWord: string) {
       let currentRowValue = inputValuesTemp[currentRow]["value"];
       if (currentRowValue.length === 5) {
         console.log(selectedWord);
-        let selectedWordArr = selectedWord.split("");
         let currentRowValueTemp = currentRowValue;
-        let result = currentRowValueTemp.split("").map((letter, i) => {
-          if (selectedWordArr[i] === letter) return "Matched";
-          if (selectedWordArr.includes(letter)) return "Included";
-          return "Not Matched";
-        });
+        let result = wordCompare(currentRowValueTemp, selectedWord)
         console.log(result);
       } else {
         console.log("Not enough letters");
