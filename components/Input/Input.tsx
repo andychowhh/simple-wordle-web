@@ -1,14 +1,15 @@
 import React from "react";
 import OtpInput from "react-otp-input";
+import ReactCardFlip from "react-card-flip";
 
 import styles from "./input.module.scss";
 
 type InputPropType = {
   value: string;
+  isFlipped: boolean;
 };
 
-function Input(props: InputPropType): JSX.Element {
-  const { value } = props;
+const OtpInputComponent = ({ value }: { value: string }) => {
   return (
     <OtpInput
       value={value}
@@ -18,6 +19,20 @@ function Input(props: InputPropType): JSX.Element {
       data-testid={`input`}
       isDisabled={true}
     />
+  );
+};
+
+function Input(props: InputPropType): JSX.Element {
+  const { value, isFlipped } = props;
+  return (
+    <ReactCardFlip
+      isFlipped={isFlipped}
+      flipSpeedBackToFront={2}
+      flipSpeedFrontToBack={2}
+    >
+      <OtpInputComponent value={value} />
+      <OtpInputComponent value={value} />
+    </ReactCardFlip>
   );
 }
 

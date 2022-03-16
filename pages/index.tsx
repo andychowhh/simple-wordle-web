@@ -11,7 +11,7 @@ import useKeyboard from "@/hooks/useKeyboard";
 import useRandomWord from "@/hooks/useRandomWord";
 
 // Types
-import {InputValueType} from "@/types/types"
+import { InputValueType } from "@/types/types";
 
 // Styles
 import "@/styles/Home.module.scss";
@@ -23,7 +23,13 @@ type InputGroupPropType = {
 const InputGroup = ({ inputValues }: InputGroupPropType): JSX.Element => {
   var rows: Array<any> = [];
   inputValues.map((inputValue: InputValueType) => {
-    rows.push(<Input key={inputValue.id} value={inputValue.value} />);
+    rows.push(
+      <Input
+        key={inputValue.id}
+        value={inputValue.value}
+        isFlipped={inputValue.isFlipped}
+      />
+    );
   });
   return <>{rows}</>;
 };
@@ -33,7 +39,8 @@ const Home: NextPage = () => {
 
   const selectedWord = useRandomWord();
   const [inputValues, keyboardRef, onChangeInput, onKeyPress] = useKeyboard(
-    currentRow, selectedWord
+    currentRow,
+    selectedWord
   );
 
   return (
