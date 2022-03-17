@@ -19,7 +19,8 @@ function InputGroup({ inputValues, currentRow }: InputGroupPropType) {
           <Input
             key={key}
             value={inputValues[currentRow]["value"][key]}
-            isFlipped={false}
+            status={inputValues[currentRow]["status"][key]}
+            isFlipped={inputValues[currentRow]["isFlipped"]}
           />
         );
       })}

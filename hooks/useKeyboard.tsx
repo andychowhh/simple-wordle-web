@@ -5,18 +5,18 @@ import { InputValueType } from "@/types/types";
 
 function useKeyboard(currentRow: number, selectedWord: string) {
   const [inputValues, setInputValues] = useState<Array<InputValueType>>([
-    { id: 0, value: [], isFlipped: false, status: "" },
-    { id: 1, value: [], isFlipped: false, status: "" },
-    { id: 2, value: [], isFlipped: false, status: "" },
-    { id: 3, value: [], isFlipped: false, status: "" },
-    { id: 4, value: [], isFlipped: false, status: "" },
+    { id: 0, value: [], isFlipped: false, status: [] },
+    { id: 1, value: [], isFlipped: false, status: [] },
+    { id: 2, value: [], isFlipped: false, status: [] },
+    { id: 3, value: [], isFlipped: false, status: [] },
+    { id: 4, value: [], isFlipped: false, status: [] },
   ]);
   const keyboardRef: any = useRef(null);
 
-  const onKeyPress = (button: string) => {
-    var english = /^[a-z]*$/;
-    const inputValuesTemp = [...inputValues];
-    let currentRowValue = inputValuesTemp[currentRow]["value"];
+  const onKeyPress = (button: string): void => {
+    var english: RegExp = /^[a-z]*$/;
+    const inputValuesTemp: Array<InputValueType> = [...inputValues];
+    let currentRowValue: Array<string> = inputValuesTemp[currentRow]["value"];
     if (english.test(button)) {
       if (currentRowValue.length < 5) {
         inputValuesTemp[currentRow]["value"].push(button);
@@ -33,11 +33,10 @@ function useKeyboard(currentRow: number, selectedWord: string) {
         console.log(selectedWord);
         let currentRowValueTemp = currentRowValue;
         let result = wordCompare(currentRowValueTemp, selectedWord);
-        inputValuesTemp.map((inputValue: InputValueType, i: number) => {
-          inputValuesTemp[i]["status"] = result[i];
-        });
+        inputValuesTemp[currentRow]["status"] = result;
         console.log(result);
         inputValuesTemp[currentRow]["isFlipped"] = true;
+        console.log(inputValuesTemp)
         setInputValues(inputValuesTemp);
       } else {
         console.log("Not enough letters");

@@ -11,15 +11,8 @@ import InputGroup from "@/components/InputGroup/InputGroup";
 import useKeyboard from "@/hooks/useKeyboard";
 import useRandomWord from "@/hooks/useRandomWord";
 
-// Types
-import { InputValueType } from "@/types/types";
-
 // Styles
 import "@/styles/Home.module.scss";
-
-type InputGroupPropType = {
-  inputValues: Array<InputValueType>;
-};
 
 const Home: NextPage = () => {
   const [currentRow, setCurrentRow] = useState<number>(0);
