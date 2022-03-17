@@ -5,6 +5,7 @@ import type { NextPage } from "next";
 // Components
 import Input from "@/components/Input/Input";
 import KeyBoard from "@/components/Keyboard/keyboard";
+import InputGroup from "@/components/InputGroup/InputGroup";
 
 // Hooks
 import useKeyboard from "@/hooks/useKeyboard";
@@ -20,36 +21,22 @@ type InputGroupPropType = {
   inputValues: Array<InputValueType>;
 };
 
-const InputGroup = ({ inputValues }: InputGroupPropType): JSX.Element => {
-  var rows: Array<any> = [];
-  inputValues.map((inputValue: InputValueType) => {
-    rows.push(
-      <Input
-        key={inputValue.id}
-        value={inputValue.value}
-        isFlipped={inputValue.isFlipped}
-      />
-    );
-  });
-  return <>{rows}</>;
-};
-
 const Home: NextPage = () => {
   const [currentRow, setCurrentRow] = useState<number>(0);
 
   const selectedWord = useRandomWord();
-  const [inputValues, keyboardRef, onChangeInput, onKeyPress] = useKeyboard(
+  const [inputValues, keyboardRef, onKeyPress] = useKeyboard(
     currentRow,
     selectedWord
   );
 
   return (
     <div className="container">
-      <InputGroup inputValues={inputValues} />
+      <InputGroup inputValues={inputValues} currentRow={currentRow} />
       <KeyBoard
         keyboardRef={keyboardRef}
-        onChange={onChangeInput}
         onKeyPress={onKeyPress}
+        onChange={() => {}}
       />
     </div>
   );

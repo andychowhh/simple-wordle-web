@@ -1,6 +1,6 @@
 export type InputValueType = {
   id: number;
-  value: string;
+  value: Array<string>;
   isFlipped: boolean;
   status: string;
 };

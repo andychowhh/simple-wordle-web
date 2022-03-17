@@ -11,14 +11,14 @@ type InputPropType = {
 function Input(props: InputPropType): JSX.Element {
   const { value, isFlipped } = props;
   return (
-    <ReactCardFlip
-      isFlipped={isFlipped}
-      flipSpeedBackToFront={2}
-      flipSpeedFrontToBack={2}
-    >
-      <input type="text" maxLength={1} className={styles.input}/>
-      <input type="text" maxLength={1} className={styles.input}/>
-    </ReactCardFlip>
+    <input type="text" maxLength={1} className={styles.input} defaultValue={value}/>
+    // <ReactCardFlip
+    //   isFlipped={isFlipped}
+    //   flipSpeedBackToFront={2}
+    //   flipSpeedFrontToBack={2}
+    // >
+    //   <input type="text" maxLength={1} className={styles.input} value={value}/>
+    // </ReactCardFlip>
   );
 }
 
