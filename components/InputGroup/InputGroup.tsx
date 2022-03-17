@@ -6,20 +6,18 @@ import { InputValueType } from "@/types/types";
 import styles from "./input-group.module.scss";
 
 type InputGroupPropType = {
-  inputValues: Array<InputValueType>;
-  currentRow: number;
+  inputValue: InputValueType;
 };
 
-function InputGroup({ inputValues, currentRow }: InputGroupPropType) {
-  const inputValue: InputValueType = inputValues[currentRow];
+function InputGroup({ inputValue }: InputGroupPropType) {
   return (
     <div className={styles.input__group}>
-      {[1, 2, 3, 4, 5].map((input, key) => {
+      {[...Array(5)].map((_, index) => {
         return (
           <Input
-            key={key}
-            value={inputValue["value"][key]}
-            status={inputValue["status"][key]}
+            key={index}
+            value={inputValue["value"][index]}
+            status={inputValue["status"][index]}
             isFlipped={inputValue["isFlipped"]}
           />
         );

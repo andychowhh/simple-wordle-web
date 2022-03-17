@@ -1,3 +1,10 @@
 .container {
     margin: auto;
 }
+
+.input__group__container {
+    display: grid;
+    grid-template-rows: 6;
+    justify-content: center;
+    row-gap: 5px;
+}

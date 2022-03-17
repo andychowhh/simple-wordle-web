@@ -6,14 +6,16 @@ import { wordCompare } from "@/utils/utils";
 
 import { InputValueType } from "@/types/types";
 
-function useKeyboard(currentRow: number, selectedWord: string) {
+function useKeyboard(selectedWord: string) {
   const [inputValues, setInputValues] = useState<Array<InputValueType>>([
     { id: 0, value: [], isFlipped: false, status: [] },
     { id: 1, value: [], isFlipped: false, status: [] },
     { id: 2, value: [], isFlipped: false, status: [] },
     { id: 3, value: [], isFlipped: false, status: [] },
     { id: 4, value: [], isFlipped: false, status: [] },
+    { id: 5, value: [], isFlipped: false, status: [] },
   ]);
+  const [currentRow, setCurrentRow] = useState<number>(0);
   const keyboardRef: any = useRef(null);
 
   const onKeyPress = (button: string): void => {
@@ -45,6 +47,7 @@ function useKeyboard(currentRow: number, selectedWord: string) {
           inputValuesTemp[currentRow]["isFlipped"] = true;
           console.log(inputValuesTemp);
           setInputValues(inputValuesTemp);
+          setCurrentRow((x) => x + 1);
         } else {
           console.log("Invalid Word");
         }
@@ -54,7 +57,7 @@ function useKeyboard(currentRow: number, selectedWord: string) {
     }
   };
 
-  return [inputValues, keyboardRef, onKeyPress];
+  return [inputValues, currentRow, keyboardRef, onKeyPress];
 }
 
 export default useKeyboard;

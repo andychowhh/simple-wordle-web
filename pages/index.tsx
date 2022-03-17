@@ -12,26 +12,31 @@ import useKeyboard from "@/hooks/useKeyboard";
 import useRandomWord from "@/hooks/useRandomWord";
 
 // Styles
-import "@/styles/Home.module.scss";
+import styles from "@/styles/Home.module.scss";
 
 const Home: NextPage = () => {
-  const [currentRow, setCurrentRow] = useState<number>(0);
 
   const selectedWord = useRandomWord();
-  const [inputValues, keyboardRef, onKeyPress] = useKeyboard(
-    currentRow,
-    selectedWord
-  );
+  const [inputValues, currentRow, keyboardRef, onKeyPress] = useKeyboard(selectedWord);
 
   return (
-    <div className="container">
-      <InputGroup inputValues={inputValues} currentRow={currentRow} />
+    <>
+      <div className={styles.input__group__container}>
+        {[...Array(6)].map((_, index) => {
+          return (
+            <InputGroup
+              key={index}
+              inputValue={inputValues[index]}
+            />
+          );
+        })}
+      </div>
       <KeyBoard
         keyboardRef={keyboardRef}
         onKeyPress={onKeyPress}
         onChange={() => {}}
       />
-    </div>
+    </>
   );
 };
 
