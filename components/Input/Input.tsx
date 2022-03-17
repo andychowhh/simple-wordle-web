@@ -13,11 +13,11 @@ type InputPropType = {
 
 function Input(props: InputPropType): JSX.Element {
   const { value, status, isFlipped } = props;
-  const inputFlippedClass =
+  const inputFlippedClass: string =
     status === wordCompareResult.characterMatched
       ? styles.input__matched
       : status === wordCompareResult.characterIncluded
-      ? styles.input__matched
+      ? styles.input__included
       : styles.input__not__included;
   return (
     <ReactCardFlip

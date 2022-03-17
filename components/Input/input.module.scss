@@ -1,8 +1,8 @@
 $size: 60px;
 
 $background-color-matched: green;
-$background-color-included: rgb(120, 124, 126);
-$background-color-not-included: rgb(201, 180, 88);
+$background-color-included: rgb(201, 180, 88);
+$background-color-not-included: rgb(120, 124, 126);
 
 .input {
   display: inline-flex;
@@ -11,14 +11,18 @@ $background-color-not-included: rgb(201, 180, 88);
   width: $size;
   height: $size;
   font-size: 30px;
+  border: 2px solid rgb(211, 214, 218);
 }
 
 .input__matched {
   background-color: $background-color-matched;
+  color: #ffffff;
 }
 .input__included {
   background-color: $background-color-included;
+  color: #ffffff;
 }
 .input__not__included {
   background-color: $background-color-not-included;
+  color: #ffffff;
 }

@@ -1,4 +1,6 @@
 .input__group {
-    display: flex;
+    display: grid;
+    grid-template-columns: auto auto auto auto auto;
     justify-content: center;
+    column-gap: 5px;
 }

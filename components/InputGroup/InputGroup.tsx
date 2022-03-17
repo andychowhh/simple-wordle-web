@@ -11,16 +11,16 @@ type InputGroupPropType = {
 };
 
 function InputGroup({ inputValues, currentRow }: InputGroupPropType) {
-  var inputs = [1, 2, 3, 4, 5];
+  const inputValue: InputValueType = inputValues[currentRow];
   return (
     <div className={styles.input__group}>
-      {inputs.map((input, key) => {
+      {[1, 2, 3, 4, 5].map((input, key) => {
         return (
           <Input
             key={key}
-            value={inputValues[currentRow]["value"][key]}
-            status={inputValues[currentRow]["status"][key]}
-            isFlipped={inputValues[currentRow]["isFlipped"]}
+            value={inputValue["value"][key]}
+            status={inputValue["status"][key]}
+            isFlipped={inputValue["isFlipped"]}
           />
         );
       })}

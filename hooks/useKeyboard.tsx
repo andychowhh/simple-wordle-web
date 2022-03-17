@@ -1,4 +1,7 @@
 import React, { useState, useRef } from "react";
+
+import { WORDS } from "@/constants/wordList";
+
 import { wordCompare } from "@/utils/utils";
 
 import { InputValueType } from "@/types/types";
@@ -31,13 +34,20 @@ function useKeyboard(currentRow: number, selectedWord: string) {
     } else if (button === "{enter}") {
       if (currentRowValue.length === 5) {
         console.log(selectedWord);
-        let currentRowValueTemp = currentRowValue;
-        let result = wordCompare(currentRowValueTemp, selectedWord);
-        inputValuesTemp[currentRow]["status"] = result;
-        console.log(result);
-        inputValuesTemp[currentRow]["isFlipped"] = true;
-        console.log(inputValuesTemp)
-        setInputValues(inputValuesTemp);
+        // check if the input is a valid word
+        let input: string = currentRowValue.join("");
+        const isInputValid = WORDS.includes(input);
+        if (isInputValid) {
+          let currentRowValueTemp = currentRowValue;
+          let result = wordCompare(currentRowValueTemp, selectedWord);
+          inputValuesTemp[currentRow]["status"] = result;
+          console.log(result);
+          inputValuesTemp[currentRow]["isFlipped"] = true;
+          console.log(inputValuesTemp);
+          setInputValues(inputValuesTemp);
+        } else {
+          console.log("Invalid Word");
+        }
       } else {
         console.log("Not enough letters");
       }
