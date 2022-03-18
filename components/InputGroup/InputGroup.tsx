@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useRef } from "react";
 import { useSpring, animated } from "react-spring";
 
 import Input from "@/components/Input/Input";
@@ -13,16 +13,18 @@ type InputGroupPropType = {
 
 function InputGroup({ inputValue }: InputGroupPropType) {
   const [styles, api] = useSpring(() => ({
-    from: { x: -3 },
+    from: { x: 0 },
   }));
+  const numOfLoop = useRef(0);
 
   useEffect(() => {
-    console.log(inputValue.isInvalid)
     if (inputValue.isInvalid) {
-      api({
-        x: 3,
-        loop: { reverse: true },
+      api.start({
+        to: [{ x: -3 }, { x: 3 }, { x: 0 }],
+        loop: () => 3 > numOfLoop.current++,
+        config: { duration: 50 },
       });
+      numOfLoop.current = 0;
     }
   }, [inputValue]);
 

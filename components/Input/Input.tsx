@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from "react";
+import React from "react";
 import ReactCardFlip from "react-card-flip";
 
 import { wordCompareResult } from "@/constants/wordCompareResult";
@@ -12,12 +12,6 @@ type InputPropType = {
 };
 
 function Input(props: InputPropType): JSX.Element {
-  // const n = useRef(0);
-  // const animationStyles = useSpring({
-  //   from: { x: 0 },
-  //   to: { x: 30 },
-  //   loop: () => 2 > n.current++,
-  // });
   const { value, status, isFlipped } = props;
   const inputFlippedClass: string =
     status === wordCompareResult.characterMatched
