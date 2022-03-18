@@ -45,8 +45,16 @@ function useKeyboard(
           setCurrentRow((x) => x + 1);
         } else {
           console.log("Invalid Word");
-          inputValuesTemp[currentRow]["isInvalid"] = true;
-          setInputValues(inputValuesTemp);
+          let temp = inputValuesTemp.map((inputValue) => {
+            if (inputValue.id === currentRow) {
+              return {
+                ...inputValue,
+                isInvalid: true,
+              };
+            }
+            return inputValue;
+          });
+          setInputValues(temp);
         }
       } else {
         console.log("Not enough letters");

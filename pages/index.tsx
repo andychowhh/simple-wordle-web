@@ -37,8 +37,8 @@ const Home: NextPage = () => {
   return (
     <>
       <div className={styles.input__group__container}>
-        {[...Array(6)].map((_, index) => {
-          return <InputGroup key={index} inputValue={inputValues[index]} />;
+        {inputValues.map((inputValue: InputValueType) => {
+          return <InputGroup key={inputValue.id} inputValue={inputValue} />;
         })}
       </div>
       <KeyBoard keyboardRef={keyboardRef} onKeyPress={onKeyPress} />
