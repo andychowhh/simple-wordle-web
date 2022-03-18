@@ -1,9 +1,9 @@
-import React from "react";
+import React, { useEffect, useRef } from "react";
 import ReactCardFlip from "react-card-flip";
 
 import { wordCompareResult } from "@/constants/wordCompareResult";
 
-import styles from "./input.module.scss";
+import inputStyles from "./input.module.scss";
 
 type InputPropType = {
   value: string;
@@ -12,13 +12,19 @@ type InputPropType = {
 };
 
 function Input(props: InputPropType): JSX.Element {
+  // const n = useRef(0);
+  // const animationStyles = useSpring({
+  //   from: { x: 0 },
+  //   to: { x: 30 },
+  //   loop: () => 2 > n.current++,
+  // });
   const { value, status, isFlipped } = props;
   const inputFlippedClass: string =
     status === wordCompareResult.characterMatched
-      ? styles.input__matched
+      ? inputStyles.input__matched
       : status === wordCompareResult.characterIncluded
-      ? styles.input__included
-      : styles.input__not__included;
+      ? inputStyles.input__included
+      : inputStyles.input__not__included;
   return (
     <ReactCardFlip
       isFlipped={isFlipped}
@@ -28,13 +34,13 @@ function Input(props: InputPropType): JSX.Element {
       <input
         type="text"
         maxLength={1}
-        className={styles.input}
+        className={inputStyles.input}
         defaultValue={value}
       />
       <input
         type="text"
         maxLength={1}
-        className={`${styles.input} ${inputFlippedClass}`}
+        className={`${inputStyles.input} ${inputFlippedClass}`}
         defaultValue={value}
       />
     </ReactCardFlip>

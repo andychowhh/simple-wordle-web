@@ -1,4 +1,4 @@
-import React, { useState, useRef } from "react";
+import React, { useState, Dispatch, SetStateAction } from "react";
 
 import { WORDS } from "@/constants/wordList";
 
@@ -6,17 +6,12 @@ import { wordCompare } from "@/utils/utils";
 
 import { InputValueType } from "@/types/types";
 
-function useKeyboard(selectedWord: string) {
-  const [inputValues, setInputValues] = useState<Array<InputValueType>>([
-    { id: 0, value: [], isFlipped: false, status: [] },
-    { id: 1, value: [], isFlipped: false, status: [] },
-    { id: 2, value: [], isFlipped: false, status: [] },
-    { id: 3, value: [], isFlipped: false, status: [] },
-    { id: 4, value: [], isFlipped: false, status: [] },
-    { id: 5, value: [], isFlipped: false, status: [] },
-  ]);
+function useKeyboard(
+  selectedWord: string,
+  inputValues: Array<InputValueType>,
+  setInputValues: Dispatch<SetStateAction<Array<InputValueType>>>
+) {
   const [currentRow, setCurrentRow] = useState<number>(0);
-  const keyboardRef: any = useRef(null);
 
   const onKeyPress = (button: string): void => {
     var english: RegExp = /^[a-z]*$/;
@@ -50,6 +45,8 @@ function useKeyboard(selectedWord: string) {
           setCurrentRow((x) => x + 1);
         } else {
           console.log("Invalid Word");
+          inputValuesTemp[currentRow]["isInvalid"] = true;
+          setInputValues(inputValuesTemp);
         }
       } else {
         console.log("Not enough letters");
@@ -57,7 +54,7 @@ function useKeyboard(selectedWord: string) {
     }
   };
 
-  return [inputValues, currentRow, keyboardRef, onKeyPress];
+  return [inputValues, onKeyPress];
 }
 
 export default useKeyboard;
