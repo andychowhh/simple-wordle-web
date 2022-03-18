@@ -1,4 +1,5 @@
 import React, { useState, useRef } from "react";
+import { ToastContainer, Zoom } from "react-toastify";
 
 import type { NextPage } from "next";
 
@@ -15,6 +16,7 @@ import useRandomWord from "@/hooks/useRandomWord";
 
 // Styles
 import styles from "@/styles/Home.module.scss";
+import "react-toastify/dist/ReactToastify.css";
 
 const Home: NextPage = () => {
   const [inputValues, setInputValues] = useState<Array<InputValueType>>([
@@ -42,6 +44,25 @@ const Home: NextPage = () => {
         })}
       </div>
       <KeyBoard keyboardRef={keyboardRef} onKeyPress={onKeyPress} />
+      <ToastContainer
+        transition={Zoom}
+        position="top-center"
+        autoClose={500}
+        hideProgressBar={true}
+        draggable={false}
+        closeButton={false}
+        style={{
+          transform: "none",
+          display: "flex",
+          flexDirection: "column",
+          justifyContent: "center",
+          alignItems: "center",
+          width: "auto",
+          left: "50%",
+          right: "50%",
+          textAlign: "center",
+        }}
+      />
     </>
   );
 };

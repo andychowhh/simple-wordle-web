@@ -1,5 +1,6 @@
 import React, { useEffect, useRef } from "react";
 import { useSpring, animated } from "react-spring";
+import { toast } from "react-toastify";
 
 import Input from "@/components/Input/Input";
 
@@ -19,6 +20,9 @@ function InputGroup({ inputValue }: InputGroupPropType) {
 
   useEffect(() => {
     if (inputValue.isInvalid) {
+      toast("Not in word list", {
+        style: { backgroundColor: "black", color: "#ffffff", width: "150px", height: "30px"},
+      });
       api.start({
         to: [{ x: -3 }, { x: 3 }, { x: 0 }],
         loop: () => 3 > numOfLoop.current++,
