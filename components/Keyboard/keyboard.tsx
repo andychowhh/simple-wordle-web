@@ -30,17 +30,17 @@ const KeyboardWrapper: FunctionComponent<IProps> = ({
         if (wordResult.status === "match") {
           return {
             class: keyboardStyle.keyboard__matched,
-            buttons: wordResult.characters,
+            buttons: wordResult.characters.split("").join(" "),
           };
         } else if (wordResult.status === "included") {
           return {
             class: keyboardStyle.keyboard__included,
-            buttons: wordResult.characters,
+            buttons: wordResult.characters.split("").join(" "),
           };
         } else if (wordResult.status === "notIncluded") {
           return {
             class: keyboardStyle.keyboard__not__included,
-            buttons: wordResult.characters,
+            buttons: wordResult.characters.split("").join(" "),
           };
         }
       }

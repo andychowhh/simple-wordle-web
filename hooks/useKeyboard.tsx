@@ -86,7 +86,7 @@ function useKeyboard(
             (wordResult: WordResultType) => {
               return {
                 ...wordResult,
-                characters: wordResult.characters.split("").join(" "),
+                characters: wordResult.characters,
               };
             }
           );
