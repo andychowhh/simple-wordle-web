@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { WORDS } from "@/constants/wordList";
 
+// use to generate random word from wordList
 function useRandomWord() {
   const [word, setWord] = useState<string>("");
   useEffect(() => {

@@ -5,7 +5,9 @@ import { WORDS } from "@/constants/wordList";
 import { wordCompare } from "@/utils/utils";
 
 import { InputValueType } from "@/types/types";
-import {WordCompareResultType} from "@/utils/utils";
+import { WordCompareResultType } from "@/types/types";
+
+import { wordCompareResult } from "@/constants/wordCompareResult";
 
 function useKeyboard(
   selectedWord: string,
@@ -52,13 +54,37 @@ function useKeyboard(
         const isInputValid = WORDS.includes(input);
         if (isInputValid) {
           let currentRowValueTemp = currentRowValue;
-          let result: Array<WordCompareResultType> = wordCompare(
+          let results: Array<WordCompareResultType> = wordCompare(
             currentRowValueTemp,
             selectedWord
           );
-          console.log(result)
-          inputValuesTemp[currentRow]["status"] = result;
+          console.log(results);
+          let wordResultsTemp = [...wordResults];
+          results.map((result: WordCompareResultType) => {
+            switch (result.result) {
+              case wordCompareResult.characterMatched:
+                wordResultsTemp[0]["characters"] += result.character;
+                break;
+              case wordCompareResult.characterIncluded:
+                wordResultsTemp[1]["characters"] += result.character;
+                break;
+              case wordCompareResult.characterNotIncluded:
+                wordResultsTemp[2]["characters"] += result.character;
+                break;
+              default:
+                break;
+            }
+          });
+          let wordResultsTempWithSpace = wordResultsTemp.map((wordResult) => {
+            return {
+              ...wordResult,
+              characters: wordResult.characters.split("").join(" "),
+            };
+          });
+          console.log(wordResultsTempWithSpace);
+          inputValuesTemp[currentRow]["status"] = results;
           inputValuesTemp[currentRow]["isFlipped"] = true;
+          setWordResults(wordResultsTempWithSpace);
           setInputValues(inputValuesTemp);
           setCurrentRow((x) => x + 1);
         } else {
@@ -79,7 +105,7 @@ function useKeyboard(
     }
   };
 
-  return [inputValues, onKeyPress];
+  return [wordResults, onKeyPress];
 }
 
 export default useKeyboard;

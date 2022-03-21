@@ -7,10 +7,10 @@ $background-color-not-included: rgb(120, 124, 126);
   color: #ffffff;
 }
 .keyboard__included {
-  background-color: $background-color-included;
+  background-color: $background-color-included !important;
   color: #ffffff;
 }
 .keyboard__not__included {
-  background-color: $background-color-not-included;
+  background-color: $background-color-not-included !important;
   color: #ffffff;
 }

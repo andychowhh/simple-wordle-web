@@ -7,14 +7,39 @@ import keyboardStyle from "./keyboard.module.scss";
 import "react-simple-keyboard/build/css/index.css";
 
 interface IProps {
+  wordResults: any;
   onKeyPress: any;
   keyboardRef: MutableRefObject<any>;
 }
 
 const KeyboardWrapper: FunctionComponent<IProps> = ({
+  wordResults,
   onKeyPress,
   keyboardRef,
 }) => {
+  let buttonTheme: Array<any> = wordResults
+    .map((wordResult: any) => {
+      if (Boolean(wordResult.characters)) {
+        if (wordResult.status === "match") {
+          return {
+            class: keyboardStyle.keyboard__matched,
+            buttons: wordResult.characters,
+          };
+        } else if (wordResult.status === "included") {
+          return {
+            class: keyboardStyle.keyboard__included,
+            buttons: wordResult.characters,
+          };
+        } else if (wordResult.status === "notIncluded") {
+          return {
+            class: keyboardStyle.keyboard__not__included,
+            buttons: wordResult.characters,
+          };
+        }
+      }
+    })
+    .filter((elem: any) => elem !== undefined);
+  console.log(buttonTheme);
   return (
     <Keyboard
       keyboardRef={(r) => (keyboardRef.current = r)}
@@ -22,20 +47,7 @@ const KeyboardWrapper: FunctionComponent<IProps> = ({
       onKeyPress={onKeyPress}
       maxLength={5}
       layout={KEYBOARD_KEYS}
-      buttonTheme={[
-        {
-          class: keyboardStyle.keyboard__matched,
-          buttons: "Q W E R T Y q w e r t y",
-        },
-        {
-          class: keyboardStyle.keyboard__included,
-          buttons: "Q q",
-        },
-        {
-          class: keyboardStyle.keyboard__not__included,
-          buttons: "a",
-        },
-      ]}
+      buttonTheme={buttonTheme}
     />
   );
 };

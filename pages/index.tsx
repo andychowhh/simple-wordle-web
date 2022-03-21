@@ -66,7 +66,7 @@ const Home: NextPage = () => {
   const keyboardRef: any = useRef(null);
 
   const selectedWord: string = useRandomWord();
-  const [currentRow, onKeyPress] = useKeyboard(
+  const [wordResults, onKeyPress] = useKeyboard(
     selectedWord,
     inputValues,
     setInputValues
@@ -79,7 +79,11 @@ const Home: NextPage = () => {
           return <InputGroup key={inputValue.id} inputValue={inputValue} />;
         })}
       </div>
-      <KeyBoard keyboardRef={keyboardRef} onKeyPress={onKeyPress} />
+      <KeyBoard
+        wordResults={wordResults}
+        keyboardRef={keyboardRef}
+        onKeyPress={onKeyPress}
+      />
       <ToastContainer
         transition={Zoom}
         position="top-center"
