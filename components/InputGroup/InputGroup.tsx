@@ -16,7 +16,7 @@ function InputGroup({ inputValue }: InputGroupPropType) {
   const [styles, api] = useSpring(() => ({
     from: { x: 0 },
   }));
-  const numOfLoop = useRef(0);
+  const numOfLoop: React.MutableRefObject<number> = useRef(0);
 
   useEffect(() => {
     if (inputValue.isInvalid) {

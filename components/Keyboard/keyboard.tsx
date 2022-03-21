@@ -3,14 +3,21 @@ import Keyboard from "react-simple-keyboard";
 
 import { KEYBOARD_KEYS } from "@/constants/keyboardKeys";
 
+import { WordResultType } from "@/types/types";
+
 import keyboardStyle from "./keyboard.module.scss";
 import "react-simple-keyboard/build/css/index.css";
 
 interface IProps {
-  wordResults: any;
+  wordResults: Array<WordResultType>;
   onKeyPress: any;
   keyboardRef: MutableRefObject<any>;
 }
+
+export type ButtonThemeType = {
+  class: string;
+  buttons: string;
+};
 
 const KeyboardWrapper: FunctionComponent<IProps> = ({
   wordResults,
@@ -18,7 +25,7 @@ const KeyboardWrapper: FunctionComponent<IProps> = ({
   keyboardRef,
 }) => {
   let buttonTheme: Array<any> = wordResults
-    .map((wordResult: any) => {
+    .map((wordResult: WordResultType) => {
       if (Boolean(wordResult.characters)) {
         if (wordResult.status === "match") {
           return {
@@ -38,8 +45,7 @@ const KeyboardWrapper: FunctionComponent<IProps> = ({
         }
       }
     })
-    .filter((elem: any) => elem !== undefined);
-  console.log(buttonTheme);
+    .filter((elem: ButtonThemeType | undefined) => elem !== undefined);
   return (
     <Keyboard
       keyboardRef={(r) => (keyboardRef.current = r)}

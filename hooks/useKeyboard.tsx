@@ -4,8 +4,11 @@ import { WORDS } from "@/constants/wordList";
 
 import { wordCompare } from "@/utils/utils";
 
-import { InputValueType } from "@/types/types";
-import { WordCompareResultType } from "@/types/types";
+import {
+  WordResultType,
+  WordCompareResultType,
+  InputValueType,
+} from "@/types/types";
 
 import { wordCompareResult } from "@/constants/wordCompareResult";
 
@@ -16,7 +19,7 @@ function useKeyboard(
 ) {
   const [currentRow, setCurrentRow] = useState<number>(0);
   // store wordResults for key color
-  const [wordResults, setWordResults] = useState<Array<any>>([
+  const [wordResults, setWordResults] = useState<Array<WordResultType>>([
     {
       status: "matched",
       characters: "",
@@ -42,7 +45,10 @@ function useKeyboard(
       }
     } else if (button === "{bksp}") {
       if (currentRowValue.length > 0) {
-        let updatedInputValuesTemp = currentRowValue.slice(0, -1);
+        let updatedInputValuesTemp: Array<string> = currentRowValue.slice(
+          0,
+          -1
+        );
         inputValuesTemp[currentRow]["value"] = updatedInputValuesTemp;
         setInputValues(inputValuesTemp);
       }
@@ -51,15 +57,16 @@ function useKeyboard(
         console.log(selectedWord);
         // check if the input is a valid word
         let input: string = currentRowValue.join("").toLowerCase();
-        const isInputValid = WORDS.includes(input);
+        const isInputValid: boolean = WORDS.includes(input);
         if (isInputValid) {
-          let currentRowValueTemp = currentRowValue;
+          let currentRowValueTemp: Array<string> = currentRowValue;
           let results: Array<WordCompareResultType> = wordCompare(
             currentRowValueTemp,
             selectedWord
           );
           console.log(results);
-          let wordResultsTemp = [...wordResults];
+          // store the result and send it to Keyboard for the buttonTheme
+          let wordResultsTemp: Array<WordResultType> = [...wordResults];
           results.map((result: WordCompareResultType) => {
             switch (result.result) {
               case wordCompareResult.characterMatched:
@@ -75,12 +82,14 @@ function useKeyboard(
                 break;
             }
           });
-          let wordResultsTempWithSpace = wordResultsTemp.map((wordResult) => {
-            return {
-              ...wordResult,
-              characters: wordResult.characters.split("").join(" "),
-            };
-          });
+          let wordResultsTempWithSpace: Array<WordResultType> = wordResultsTemp.map(
+            (wordResult: WordResultType) => {
+              return {
+                ...wordResult,
+                characters: wordResult.characters.split("").join(" "),
+              };
+            }
+          );
           console.log(wordResultsTempWithSpace);
           inputValuesTemp[currentRow]["status"] = results;
           inputValuesTemp[currentRow]["isFlipped"] = true;
@@ -88,6 +97,7 @@ function useKeyboard(
           setInputValues(inputValuesTemp);
           setCurrentRow((x) => x + 1);
         } else {
+          // The input is invalid(Not a meaningful word)
           let temp = inputValuesTemp.map((inputValue) => {
             if (inputValue.id === currentRow) {
               return {
