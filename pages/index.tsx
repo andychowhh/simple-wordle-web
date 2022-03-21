@@ -20,12 +20,48 @@ import "react-toastify/dist/ReactToastify.css";
 
 const Home: NextPage = () => {
   const [inputValues, setInputValues] = useState<Array<InputValueType>>([
-    { id: 0, value: [], isFlipped: false, status: [], isInvalid: false },
-    { id: 1, value: [], isFlipped: false, status: [], isInvalid: false },
-    { id: 2, value: [], isFlipped: false, status: [], isInvalid: false },
-    { id: 3, value: [], isFlipped: false, status: [], isInvalid: false },
-    { id: 4, value: [], isFlipped: false, status: [], isInvalid: false },
-    { id: 5, value: [], isFlipped: false, status: [], isInvalid: false },
+    {
+      id: 0,
+      value: [],
+      isFlipped: false,
+      status: [],
+      isInvalid: false,
+    },
+    {
+      id: 1,
+      value: [],
+      isFlipped: false,
+      status: [],
+      isInvalid: false,
+    },
+    {
+      id: 2,
+      value: [],
+      isFlipped: false,
+      status: [],
+      isInvalid: false,
+    },
+    {
+      id: 3,
+      value: [],
+      isFlipped: false,
+      status: [],
+      isInvalid: false,
+    },
+    {
+      id: 4,
+      value: [],
+      isFlipped: false,
+      status: [],
+      isInvalid: false,
+    },
+    {
+      id: 5,
+      value: [],
+      isFlipped: false,
+      status: [],
+      isInvalid: false,
+    },
   ]);
   const keyboardRef: any = useRef(null);
 

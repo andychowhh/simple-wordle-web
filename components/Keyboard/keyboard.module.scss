@@ -1,0 +1,16 @@
+$background-color-matched: green;
+$background-color-included: rgb(201, 180, 88);
+$background-color-not-included: rgb(120, 124, 126);
+
+.keyboard__matched {
+  background-color: $background-color-matched !important;
+  color: #ffffff;
+}
+.keyboard__included {
+  background-color: $background-color-included;
+  color: #ffffff;
+}
+.keyboard__not__included {
+  background-color: $background-color-not-included;
+  color: #ffffff;
+}

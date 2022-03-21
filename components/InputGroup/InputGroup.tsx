@@ -47,7 +47,7 @@ function InputGroup({ inputValue }: InputGroupPropType) {
           <Input
             key={index}
             value={inputValue["value"][index]}
-            status={inputValue["status"][index]}
+            status={inputValue["status"][index]?.result}
             isFlipped={inputValue["isFlipped"]}
           />
         );

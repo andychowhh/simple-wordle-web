@@ -5,6 +5,7 @@ import { WORDS } from "@/constants/wordList";
 import { wordCompare } from "@/utils/utils";
 
 import { InputValueType } from "@/types/types";
+import {WordCompareResultType} from "@/utils/utils";
 
 function useKeyboard(
   selectedWord: string,
@@ -12,6 +13,21 @@ function useKeyboard(
   setInputValues: Dispatch<SetStateAction<Array<InputValueType>>>
 ) {
   const [currentRow, setCurrentRow] = useState<number>(0);
+  // store wordResults for key color
+  const [wordResults, setWordResults] = useState<Array<any>>([
+    {
+      status: "matched",
+      characters: "",
+    },
+    {
+      status: "included",
+      characters: "",
+    },
+    {
+      status: "notIncluded",
+      characters: "",
+    },
+  ]);
 
   const onKeyPress = (button: string): void => {
     var english: RegExp = /^[A-Z]*$/;
@@ -36,14 +52,13 @@ function useKeyboard(
         const isInputValid = WORDS.includes(input);
         if (isInputValid) {
           let currentRowValueTemp = currentRowValue;
-          let result: Array<string> = wordCompare(
+          let result: Array<WordCompareResultType> = wordCompare(
             currentRowValueTemp,
             selectedWord
           );
+          console.log(result)
           inputValuesTemp[currentRow]["status"] = result;
-          console.log(result);
           inputValuesTemp[currentRow]["isFlipped"] = true;
-          console.log(inputValuesTemp);
           setInputValues(inputValuesTemp);
           setCurrentRow((x) => x + 1);
         } else {

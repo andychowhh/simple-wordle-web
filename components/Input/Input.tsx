@@ -7,7 +7,7 @@ import inputStyles from "./input.module.scss";
 
 type InputPropType = {
   value: string;
-  status: string;
+  status: string|undefined;
   isFlipped: boolean;
 };
 
