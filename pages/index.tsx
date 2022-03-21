@@ -47,7 +47,7 @@ const Home: NextPage = () => {
       <ToastContainer
         transition={Zoom}
         position="top-center"
-        autoClose={500}
+        autoClose={200}
         hideProgressBar={true}
         draggable={false}
         closeButton={false}

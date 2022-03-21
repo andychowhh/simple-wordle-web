@@ -7,10 +7,9 @@ function useRandomWord() {
     let wordFilteredByLength: Array<string> = WORDS.filter(
       (word: string) => word.length === 5
     );
-    let randomWord: string =
-      wordFilteredByLength[
-        Math.floor(Math.random() * wordFilteredByLength.length)
-      ];
+    let randomWord: string = wordFilteredByLength[
+      Math.floor(Math.random() * wordFilteredByLength.length)
+    ].toUpperCase();
     setWord(randomWord);
   }, []);
 

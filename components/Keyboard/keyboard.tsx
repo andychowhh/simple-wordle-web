@@ -1,5 +1,7 @@
-import React, { FunctionComponent, useState, MutableRefObject } from "react";
+import React, { FunctionComponent, MutableRefObject } from "react";
 import Keyboard from "react-simple-keyboard";
+
+import { KEYBOARD_KEYS } from "@/constants/keyboardKeys";
 
 import "react-simple-keyboard/build/css/index.css";
 
@@ -18,6 +20,7 @@ const KeyboardWrapper: FunctionComponent<IProps> = ({
       layoutName="default"
       onKeyPress={onKeyPress}
       maxLength={5}
+      layout={KEYBOARD_KEYS}
     />
   );
 };

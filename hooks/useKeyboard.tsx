@@ -14,7 +14,7 @@ function useKeyboard(
   const [currentRow, setCurrentRow] = useState<number>(0);
 
   const onKeyPress = (button: string): void => {
-    var english: RegExp = /^[a-z]*$/;
+    var english: RegExp = /^[A-Z]*$/;
     const inputValuesTemp: Array<InputValueType> = [...inputValues];
     let currentRowValue: Array<string> = inputValuesTemp[currentRow]["value"];
     if (english.test(button)) {
@@ -32,11 +32,14 @@ function useKeyboard(
       if (currentRowValue.length === 5) {
         console.log(selectedWord);
         // check if the input is a valid word
-        let input: string = currentRowValue.join("");
+        let input: string = currentRowValue.join("").toLowerCase();
         const isInputValid = WORDS.includes(input);
         if (isInputValid) {
           let currentRowValueTemp = currentRowValue;
-          let result = wordCompare(currentRowValueTemp, selectedWord);
+          let result: Array<string> = wordCompare(
+            currentRowValueTemp,
+            selectedWord
+          );
           inputValuesTemp[currentRow]["status"] = result;
           console.log(result);
           inputValuesTemp[currentRow]["isFlipped"] = true;
@@ -44,7 +47,6 @@ function useKeyboard(
           setInputValues(inputValuesTemp);
           setCurrentRow((x) => x + 1);
         } else {
-          console.log("Invalid Word");
           let temp = inputValuesTemp.map((inputValue) => {
             if (inputValue.id === currentRow) {
               return {
