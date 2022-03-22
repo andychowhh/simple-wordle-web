@@ -67,39 +67,36 @@ function useKeyboard(
           // store the result and send it to Keyboard for the buttonTheme
           let wordResultsTemp: Array<WordResultType> = [...wordResults];
           results.map((result: WordCompareResultType) => {
+            const isCharOnMatched: boolean = wordResultsTemp[0][
+              "characters"
+            ].includes(result.character);
+            const isCharOnIncluded: boolean = wordResultsTemp[1][
+              "characters"
+            ].includes(result.character);
+            const isCharOnNotIncluded: boolean = wordResultsTemp[2][
+              "characters"
+            ].includes(result.character);
+
             switch (result.result) {
               // if wordResultsTemp[1]/wordResultsTemp[2] includes the char, remove it, and then add the char in wordResultsTemp[0].
               case wordCompareResult.characterMatched:
-                if (
-                  !wordResultsTemp[0]["characters"].includes(result.character)
-                ) {
-                  if (
-                    wordResultsTemp[1]["characters"].includes(result.character)
-                  ) {
+                if (!isCharOnMatched) {
+                  if (isCharOnIncluded) {
                     wordResultsTemp[1]["characters"] = wordResultsTemp[1][
                       "characters"
                     ].replace(result.character, "");
-                  } else if (
-                    wordResultsTemp[2]["characters"].includes(result.character)
-                  ) {
-                    wordResultsTemp[2]["characters"] = wordResultsTemp[1][
+                  } else if (isCharOnNotIncluded) {
+                    wordResultsTemp[2]["characters"] = wordResultsTemp[2][
                       "characters"
                     ].replace(result.character, "");
                   }
                   wordResultsTemp[0]["characters"] += result.character;
                 }
                 break;
-              // if wordResultsTemp[0] does not include the char, remove it from arr and then add it to wordResultsTemp[1]
+              // if wordResultsTemp[0] includes the char, remove it from arr and then add it to wordResultsTemp[1]
               case wordCompareResult.characterIncluded:
-                if (
-                  !wordResultsTemp[0]["characters"].includes(
-                    result.character
-                  ) &&
-                  !wordResultsTemp[1]["characters"].includes(result.character)
-                ) {
-                  if (
-                    wordResultsTemp[0]["characters"].includes(result.character)
-                  ) {
+                if (!isCharOnMatched && !isCharOnIncluded) {
+                  if (isCharOnNotIncluded) {
                     wordResultsTemp[0]["characters"] = wordResultsTemp[0][
                       "characters"
                     ].replace(result.character, "");
@@ -110,13 +107,9 @@ function useKeyboard(
               // if wordResultsTemp[0]/wordResultsTemp[1] does not include the char, add it to wordResultsTemp[2]
               case wordCompareResult.characterNotIncluded:
                 if (
-                  !wordResultsTemp[0]["characters"].includes(
-                    result.character
-                  ) &&
-                  !wordResultsTemp[1]["characters"].includes(
-                    result.character
-                  ) &&
-                  !wordResultsTemp[2]["characters"].includes(result.character)
+                  !isCharOnMatched &&
+                  !isCharOnIncluded &&
+                  !isCharOnNotIncluded
                 ) {
                   wordResultsTemp[2]["characters"] += result.character;
                 }
