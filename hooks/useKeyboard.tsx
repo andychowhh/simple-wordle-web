@@ -68,6 +68,7 @@ function useKeyboard(
           let wordResultsTemp: Array<WordResultType> = [...wordResults];
           results.map((result: WordCompareResultType) => {
             switch (result.result) {
+              // if wordResultsTemp[1]/wordResultsTemp[2] includes the char, remove it, and then add the char in wordResultsTemp[0].
               case wordCompareResult.characterMatched:
                 if (
                   !wordResultsTemp[0]["characters"].includes(result.character)
@@ -88,29 +89,36 @@ function useKeyboard(
                   wordResultsTemp[0]["characters"] += result.character;
                 }
                 break;
+              // if wordResultsTemp[0] does not include the char, remove it from arr and then add it to wordResultsTemp[1]
               case wordCompareResult.characterIncluded:
                 if (
+                  !wordResultsTemp[0]["characters"].includes(
+                    result.character
+                  ) &&
                   !wordResultsTemp[1]["characters"].includes(result.character)
                 ) {
                   if (
-                    !wordResultsTemp[0]["characters"].includes(result.character)
+                    wordResultsTemp[0]["characters"].includes(result.character)
                   ) {
-                    wordResultsTemp[1]["characters"] += result.character;
+                    wordResultsTemp[0]["characters"] = wordResultsTemp[0][
+                      "characters"
+                    ].replace(result.character, "");
                   }
+                  wordResultsTemp[1]["characters"] += result.character;
                 }
                 break;
+              // if wordResultsTemp[0]/wordResultsTemp[1] does not include the char, add it to wordResultsTemp[2]
               case wordCompareResult.characterNotIncluded:
                 if (
+                  !wordResultsTemp[0]["characters"].includes(
+                    result.character
+                  ) &&
+                  !wordResultsTemp[1]["characters"].includes(
+                    result.character
+                  ) &&
                   !wordResultsTemp[2]["characters"].includes(result.character)
                 ) {
-                  if (
-                    !wordResultsTemp[0]["characters"].includes(
-                      result.character
-                    ) &&
-                    !wordResultsTemp[1]["characters"].includes(result.character)
-                  ) {
-                    wordResultsTemp[2]["characters"] += result.character;
-                  }
+                  wordResultsTemp[2]["characters"] += result.character;
                 }
                 break;
               default:
