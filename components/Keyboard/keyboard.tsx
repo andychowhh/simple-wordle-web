@@ -53,7 +53,6 @@ const KeyboardWrapper: FunctionComponent<IProps> = ({
       }
     })
     .filter((elem: ButtonThemeType | undefined) => elem !== undefined);
-  console.log(buttonTheme);
   return (
     <Keyboard
       keyboardRef={(r) => (keyboardRef.current = r)}

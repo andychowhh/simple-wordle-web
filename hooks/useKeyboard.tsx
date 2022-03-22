@@ -34,6 +34,24 @@ function useKeyboard(
     },
   ]);
 
+  // executes when the input is invalid, e.g. Not enough letter/Not in word list
+  const setInputValuesToInvalid = (
+    inputValues: Array<InputValueType>
+  ): void => {
+    let temp: Array<InputValueType> = inputValues.map(
+      (inputValue: InputValueType) => {
+        if (inputValue.id === currentRow) {
+          return {
+            ...inputValue,
+            isInvalid: true,
+          };
+        }
+        return inputValue;
+      }
+    );
+    setInputValues(temp);
+  };
+
   const onKeyPress = (button: string): void => {
     var english: RegExp = /^[A-Z]*$/;
     const inputValuesTemp: Array<InputValueType> = [...inputValues];
@@ -133,25 +151,17 @@ function useKeyboard(
           setInputValues(inputValuesTemp);
           setCurrentRow((x) => x + 1);
         } else {
-          // The input is invalid(Not a meaningful word)
-          let temp = inputValuesTemp.map((inputValue) => {
-            if (inputValue.id === currentRow) {
-              return {
-                ...inputValue,
-                isInvalid: true,
-              };
-            }
-            return inputValue;
-          });
-          setInputValues(temp);
+          // Not in word list
+          setInputValuesToInvalid(inputValuesTemp);
         }
       } else {
-        console.log("Not enough letters");
+        // Not Enough Letter
+        setInputValuesToInvalid(inputValuesTemp);
       }
     }
   };
 
-  return [wordResults, onKeyPress];
+  return { wordResults, onKeyPress };
 }
 
 export default useKeyboard;

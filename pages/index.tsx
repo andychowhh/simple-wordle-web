@@ -19,54 +19,21 @@ import styles from "@/styles/Home.module.scss";
 import "react-toastify/dist/ReactToastify.css";
 
 const Home: NextPage = () => {
-  const [inputValues, setInputValues] = useState<Array<InputValueType>>([
-    {
-      id: 0,
-      value: [],
-      isFlipped: false,
-      status: [],
-      isInvalid: false,
-    },
-    {
-      id: 1,
-      value: [],
-      isFlipped: false,
-      status: [],
-      isInvalid: false,
-    },
-    {
-      id: 2,
-      value: [],
-      isFlipped: false,
-      status: [],
-      isInvalid: false,
-    },
-    {
-      id: 3,
-      value: [],
-      isFlipped: false,
-      status: [],
-      isInvalid: false,
-    },
-    {
-      id: 4,
-      value: [],
-      isFlipped: false,
-      status: [],
-      isInvalid: false,
-    },
-    {
-      id: 5,
-      value: [],
-      isFlipped: false,
-      status: [],
-      isInvalid: false,
-    },
-  ]);
+  const [inputValues, setInputValues] = useState<Array<InputValueType>>(
+    [...Array(6)].map((_, index) => {
+      return {
+        id: index,
+        value: [],
+        isFlipped: false,
+        status: [],
+        isInvalid: false,
+      };
+    })
+  );
   const keyboardRef: any = useRef(null);
 
   const selectedWord: string = useRandomWord();
-  const [wordResults, onKeyPress] = useKeyboard(
+  const { wordResults, onKeyPress } = useKeyboard(
     selectedWord,
     inputValues,
     setInputValues
