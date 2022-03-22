@@ -27,25 +27,33 @@ const KeyboardWrapper: FunctionComponent<IProps> = ({
   let buttonTheme: Array<any> = wordResults
     .map((wordResult: WordResultType) => {
       if (Boolean(wordResult.characters)) {
-        if (wordResult.status === "match") {
-          return {
-            class: keyboardStyle.keyboard__matched,
-            buttons: wordResult.characters.split("").join(" "),
-          };
-        } else if (wordResult.status === "included") {
-          return {
-            class: keyboardStyle.keyboard__included,
-            buttons: wordResult.characters.split("").join(" "),
-          };
-        } else if (wordResult.status === "notIncluded") {
-          return {
-            class: keyboardStyle.keyboard__not__included,
-            buttons: wordResult.characters.split("").join(" "),
-          };
+        let theme: ButtonThemeType | undefined = undefined;
+        switch (wordResult.status) {
+          case "matched":
+            theme = {
+              class: keyboardStyle.keyboard__matched,
+              buttons: wordResult.characters.split("").join(" "),
+            };
+            break;
+          case "included":
+            theme = {
+              class: keyboardStyle.keyboard__included,
+              buttons: wordResult.characters.split("").join(" "),
+            };
+            break;
+          case "notIncluded":
+            theme = {
+              class: keyboardStyle.keyboard__not__included,
+              buttons: wordResult.characters.split("").join(" "),
+            };
+          default:
+            break;
         }
+        return theme;
       }
     })
     .filter((elem: ButtonThemeType | undefined) => elem !== undefined);
+  console.log(buttonTheme);
   return (
     <Keyboard
       keyboardRef={(r) => (keyboardRef.current = r)}

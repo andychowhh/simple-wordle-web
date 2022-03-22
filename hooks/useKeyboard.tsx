@@ -64,19 +64,54 @@ function useKeyboard(
             currentRowValueTemp,
             selectedWord
           );
-          console.log(results);
           // store the result and send it to Keyboard for the buttonTheme
           let wordResultsTemp: Array<WordResultType> = [...wordResults];
           results.map((result: WordCompareResultType) => {
             switch (result.result) {
               case wordCompareResult.characterMatched:
-                wordResultsTemp[0]["characters"] += result.character;
+                if (
+                  !wordResultsTemp[0]["characters"].includes(result.character)
+                ) {
+                  if (
+                    wordResultsTemp[1]["characters"].includes(result.character)
+                  ) {
+                    wordResultsTemp[1]["characters"] = wordResultsTemp[1][
+                      "characters"
+                    ].replace(result.character, "");
+                  } else if (
+                    wordResultsTemp[2]["characters"].includes(result.character)
+                  ) {
+                    wordResultsTemp[2]["characters"] = wordResultsTemp[1][
+                      "characters"
+                    ].replace(result.character, "");
+                  }
+                  wordResultsTemp[0]["characters"] += result.character;
+                }
                 break;
               case wordCompareResult.characterIncluded:
-                wordResultsTemp[1]["characters"] += result.character;
+                if (
+                  !wordResultsTemp[1]["characters"].includes(result.character)
+                ) {
+                  if (
+                    !wordResultsTemp[0]["characters"].includes(result.character)
+                  ) {
+                    wordResultsTemp[1]["characters"] += result.character;
+                  }
+                }
                 break;
               case wordCompareResult.characterNotIncluded:
-                wordResultsTemp[2]["characters"] += result.character;
+                if (
+                  !wordResultsTemp[2]["characters"].includes(result.character)
+                ) {
+                  if (
+                    !wordResultsTemp[0]["characters"].includes(
+                      result.character
+                    ) &&
+                    !wordResultsTemp[1]["characters"].includes(result.character)
+                  ) {
+                    wordResultsTemp[2]["characters"] += result.character;
+                  }
+                }
                 break;
               default:
                 break;
