@@ -16,4 +16,5 @@ export type InputValueType = {
   isFlipped: boolean;
   status: Array<WordCompareResultType>;
   isInvalid: boolean;
+  errorMessage: string;
 };

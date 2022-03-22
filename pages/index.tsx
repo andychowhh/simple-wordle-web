@@ -27,10 +27,11 @@ const Home: NextPage = () => {
         isFlipped: false,
         status: [],
         isInvalid: false,
+        errorMessage: "",
       };
     })
   );
-  const keyboardRef: any = useRef(null);
+  const keyboardRef: React.MutableRefObject<any> = useRef(null);
 
   const selectedWord: string = useRandomWord();
   const { wordResults, onKeyPress } = useKeyboard(

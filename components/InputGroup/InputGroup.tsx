@@ -20,12 +20,13 @@ function InputGroup({ inputValue }: InputGroupPropType) {
 
   useEffect(() => {
     if (inputValue.isInvalid) {
-      toast("Not in word list", {
+      toast(inputValue.errorMessage, {
         style: {
           backgroundColor: "black",
           color: "#ffffff",
           width: "150px",
           height: "30px",
+          whiteSpace: "nowrap",
         },
       });
       api.start({

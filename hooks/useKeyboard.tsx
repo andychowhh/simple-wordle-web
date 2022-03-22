@@ -36,7 +36,8 @@ function useKeyboard(
 
   // executes when the input is invalid, e.g. Not enough letter/Not in word list
   const setInputValuesToInvalid = (
-    inputValues: Array<InputValueType>
+    inputValues: Array<InputValueType>,
+    errorMsg: string
   ): void => {
     let temp: Array<InputValueType> = inputValues.map(
       (inputValue: InputValueType) => {
@@ -44,6 +45,7 @@ function useKeyboard(
           return {
             ...inputValue,
             isInvalid: true,
+            errorMessage: errorMsg,
           };
         }
         return inputValue;
@@ -152,11 +154,11 @@ function useKeyboard(
           setCurrentRow((x) => x + 1);
         } else {
           // Not in word list
-          setInputValuesToInvalid(inputValuesTemp);
+          setInputValuesToInvalid(inputValuesTemp, "Not in word list");
         }
       } else {
         // Not Enough Letter
-        setInputValuesToInvalid(inputValuesTemp);
+        setInputValuesToInvalid(inputValuesTemp, "Not enough letter");
       }
     }
   };
