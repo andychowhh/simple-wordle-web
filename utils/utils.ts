@@ -2,14 +2,25 @@ import { wordCompareResult } from "@/constants/wordCompareResult";
 
 import { WordCompareResultType } from "@/types/types";
 
+type CheckType = {
+  character: string;
+  index: number;
+};
+
+type ResultType = {
+  character: string;
+  result: string;
+  index: number;
+};
+
 export const wordCompare = (
   input: Array<string>,
   target: string
 ): Array<WordCompareResultType> => {
-  let matchedArr: Array<any> = [];
-  let includedArr: Array<any> = [];
+  let matchedArr: Array<CheckType> = [];
+  let includedArr: Array<CheckType> = [];
 
-  let result: Array<any> = [];
+  let result: Array<ResultType> = [];
   // put matched/included char in corresponding arrays
   input.map((letter: string, i: number) => {
     let targetArr: Array<string> = target.split("");
@@ -24,13 +35,12 @@ export const wordCompare = (
         index: i,
       });
     }
-    return;
   });
   // use targetArr to control the word which is already handled
   let targetArr: Array<string | null> = target.split("");
   // if matched, remove the element from the targetArr based on its index, and push it to result[]
-  matchedArr.map((matched) => {
-    let index = matched.index;
+  matchedArr.map((matched: CheckType) => {
+    let index: number = matched.index;
     if (targetArr[index] !== null) {
       result.push({
         character: matched.character,
@@ -40,10 +50,8 @@ export const wordCompare = (
       targetArr[index] = null;
     }
   });
-  // console.log("targetArr", targetArr);
-  // console.log("result", result);
   // if included, remove the element in targetArr after locating its index
-  includedArr.map((included) => {
+  includedArr.map((included: CheckType) => {
     let characterIndex: number = targetArr.findIndex(
       (x) => x === included.character
     );
@@ -56,24 +64,23 @@ export const wordCompare = (
       targetArr[characterIndex] = null;
     }
   });
-  console.log("targetArr", targetArr);
-  console.log("result", result);
 
-  let filteredResult = input.map((ele: string, i: number) => {
-    let obj = {
-      character: ele,
-    };
-    let charResult = result.find((resultItem) => {
-      return resultItem.index === i;
-    });
-    let formattedCharResult = charResult
-      ? charResult.result
-      : wordCompareResult.characterNotIncluded;
+  let formattedResult: Array<WordCompareResultType> = input.map(
+    (ele: string, i: number) => {
+      let charResult: ResultType | undefined = result.find(
+        (resultItem: ResultType) => {
+          return resultItem.index === i;
+        }
+      );
+      let formattedCharResult: string = charResult
+        ? charResult.result
+        : wordCompareResult.characterNotIncluded;
 
-    return {
-      ...obj,
-      result: formattedCharResult,
-    };
-  });
-  return filteredResult;
+      return {
+        character: ele,
+        result: formattedCharResult,
+      };
+    }
+  );
+  return formattedResult;
 };
