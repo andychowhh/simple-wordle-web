@@ -20,7 +20,14 @@ a {
   box-sizing: border-box;
 }
 
+/* react-simple-keyboard */
 .react-simple-keyboard{
-  margin: 0 auto;
+  margin: 4px 0 15px 0;
   flex: 1;
+}
+.hg-row{
+  margin-bottom: 10px !important;
+}
+.hg-button{
+  height: 55px !important;
 }

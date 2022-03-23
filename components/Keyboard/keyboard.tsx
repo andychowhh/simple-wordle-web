@@ -62,6 +62,10 @@ const KeyboardWrapper: FunctionComponent<IProps> = ({
       maxLength={5}
       layout={KEYBOARD_KEYS}
       buttonTheme={buttonTheme}
+      display={{
+        '{enter}':'ENTER',
+        '{bksp}': 'DELETE'
+      }}
     />
   );
 };
