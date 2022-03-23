@@ -7,7 +7,7 @@ import inputStyles from "./input.module.scss";
 
 type InputPropType = {
   value: string;
-  status: string|undefined;
+  status: string | undefined;
   isFlipped: boolean;
 };
 
@@ -30,12 +30,14 @@ function Input(props: InputPropType): JSX.Element {
         maxLength={1}
         className={inputStyles.input}
         defaultValue={value}
+        disabled={true}
       />
       <input
         type="text"
         maxLength={1}
         className={`${inputStyles.input} ${inputFlippedClass}`}
         defaultValue={value}
+        disabled={true}
       />
     </ReactCardFlip>
   );
