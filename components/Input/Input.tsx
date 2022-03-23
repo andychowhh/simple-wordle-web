@@ -19,25 +19,25 @@ function Input(props: InputPropType): JSX.Element {
       : status === wordCompareResult.characterIncluded
       ? inputStyles.input__included
       : inputStyles.input__not__included;
+
+  const getInputProps = (config: any) => ({
+    type: "text",
+    maxLength: 1,
+    disabled: true,
+    defaultValue: value,
+    ...config,
+  });
   return (
     <ReactCardFlip
       isFlipped={isFlipped}
       flipSpeedBackToFront={2}
       flipSpeedFrontToBack={2}
     >
+      <input {...getInputProps({ className: inputStyles.input })} />
       <input
-        type="text"
-        maxLength={1}
-        className={inputStyles.input}
-        defaultValue={value}
-        disabled={true}
-      />
-      <input
-        type="text"
-        maxLength={1}
-        className={`${inputStyles.input} ${inputFlippedClass}`}
-        defaultValue={value}
-        disabled={true}
+        {...getInputProps({
+          className: `${inputStyles.input} ${inputFlippedClass}`,
+        })}
       />
     </ReactCardFlip>
   );
