@@ -42,16 +42,18 @@ const Home: NextPage = () => {
 
   return (
     <>
-      <div className={styles.input__group__container}>
-        {inputValues.map((inputValue: InputValueType) => {
-          return <InputGroup key={inputValue.id} inputValue={inputValue} />;
-        })}
+      <div id={styles.home}>
+        <div className={styles.input__group__container}>
+          {inputValues.map((inputValue: InputValueType) => {
+            return <InputGroup key={inputValue.id} inputValue={inputValue} />;
+          })}
+        </div>
+        <KeyBoard
+          wordResults={wordResults}
+          keyboardRef={keyboardRef}
+          onKeyPress={onKeyPress}
+        />
       </div>
-      <KeyBoard
-        wordResults={wordResults}
-        keyboardRef={keyboardRef}
-        onKeyPress={onKeyPress}
-      />
       <ToastContainer
         transition={Zoom}
         position="top-center"

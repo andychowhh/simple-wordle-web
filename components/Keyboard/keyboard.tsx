@@ -56,6 +56,7 @@ const KeyboardWrapper: FunctionComponent<IProps> = ({
   return (
     <Keyboard
       keyboardRef={(r) => (keyboardRef.current = r)}
+      inputPattern= "/^[A-Z]*$/"
       layoutName="default"
       onKeyPress={onKeyPress}
       maxLength={5}

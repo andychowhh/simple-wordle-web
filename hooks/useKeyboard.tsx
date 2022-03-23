@@ -69,17 +69,11 @@ function useKeyboard(
   };
 
   const onKeyPress = (button: string): void => {
-    var english: RegExp = /^[A-Z]*$/;
     const inputValuesTemp: Array<InputValueType> = [...inputValues];
     // currentRow === -1 means the game ends
     if (currentRow !== -1) {
       let currentRowValue: Array<string> = inputValuesTemp[currentRow]["value"];
-      if (english.test(button)) {
-        if (currentRowValue.length < 5) {
-          inputValuesTemp[currentRow]["value"].push(button);
-          setInputValues(inputValuesTemp);
-        }
-      } else if (button === "{bksp}") {
+      if (button === "{bksp}") {
         if (currentRowValue.length > 0) {
           let updatedInputValuesTemp: Array<string> = currentRowValue.slice(
             0,
@@ -194,6 +188,11 @@ function useKeyboard(
         } else {
           // Not Enough Letter
           setInputValuesToInvalid(inputValuesTemp, "Not enough letter");
+        }
+      } else {
+        if (currentRowValue.length < 5) {
+          inputValuesTemp[currentRow]["value"].push(button);
+          setInputValues(inputValuesTemp);
         }
       }
     }
