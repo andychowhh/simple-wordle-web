@@ -8,8 +8,8 @@ $background-color-not-included: rgb(120, 124, 126);
   display: inline-flex;
   justify-content: center;
   text-align: center;
-  width: $size;
-  height: $size;
+  max-width: $size;
+  aspect-ratio: 1 / 1;
   font-size: 30px;
   border: 2px solid rgb(211, 214, 218);
 }

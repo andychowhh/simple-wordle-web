@@ -14,3 +14,7 @@ $background-color-not-included: rgb(120, 124, 126);
   background-color: $background-color-not-included !important;
   color: #ffffff;
 }
+
+.keyboard__container {
+  margin: 0 5px;
+}

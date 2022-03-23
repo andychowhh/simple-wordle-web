@@ -22,12 +22,12 @@ a {
 
 /* react-simple-keyboard */
 .react-simple-keyboard{
-  margin: 4px 0 15px 0;
-  flex: 1;
+  height: 200px;
+  margin: 4px 0;
 }
-.hg-row{
+.hg-row:not(:last-child){
   margin-bottom: 10px !important;
 }
 .hg-button{
-  height: 55px !important;
+  height: 57px !important;
 }

@@ -54,19 +54,21 @@ const KeyboardWrapper: FunctionComponent<IProps> = ({
     })
     .filter((elem: ButtonThemeType | undefined) => elem !== undefined);
   return (
-    <Keyboard
-      keyboardRef={(r) => (keyboardRef.current = r)}
-      inputPattern= "/^[A-Z]*$/"
-      layoutName="default"
-      onKeyPress={onKeyPress}
-      maxLength={5}
-      layout={KEYBOARD_KEYS}
-      buttonTheme={buttonTheme}
-      display={{
-        '{enter}':'ENTER',
-        '{bksp}': 'DELETE'
-      }}
-    />
+    <div className={keyboardStyle.keyboard__container}>
+      <Keyboard
+        keyboardRef={(r) => (keyboardRef.current = r)}
+        inputPattern="/^[A-Z]*$/"
+        layoutName="default"
+        onKeyPress={onKeyPress}
+        maxLength={5}
+        layout={KEYBOARD_KEYS}
+        buttonTheme={buttonTheme}
+        display={{
+          "{enter}": "ENTER",
+          "{bksp}": "DELETE",
+        }}
+      />
+    </div>
   );
 };
 

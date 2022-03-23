@@ -11,7 +11,9 @@
 .input__group__container {
     display: grid;
     justify-content: center;
-    row-gap: 5px;
-    height: 70%;
+    flex: 1;
+    grid-template-rows: repeat(6, 1fr);
+    grid-gap: 5px;
     padding: 10px;
+    margin: 0 auto;
 }
