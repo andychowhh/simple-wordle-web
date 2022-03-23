@@ -12,6 +12,7 @@ $background-color-not-included: rgb(120, 124, 126);
   aspect-ratio: 1 / 1;
   font-size: 30px;
   border: 2px solid rgb(211, 214, 218);
+  box-sizing: content-box;
 }
 
 .input__matched {
