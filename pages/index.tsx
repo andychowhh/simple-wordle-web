@@ -71,6 +71,7 @@ const Home: NextPage = () => {
           left: "50%",
           right: "50%",
           textAlign: "center",
+          fontWeight: "700"
         }}
       />
     </>

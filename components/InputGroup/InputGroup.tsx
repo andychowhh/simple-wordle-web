@@ -24,8 +24,7 @@ function InputGroup({ inputValue }: InputGroupPropType) {
         style: {
           backgroundColor: "black",
           color: "#ffffff",
-          width: "150px",
-          height: "30px",
+          width: "auto",
           whiteSpace: "nowrap",
         },
       });
