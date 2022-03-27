@@ -1,15 +1,11 @@
 import React from "react";
 import ReactCardFlip from "react-card-flip";
 
+import { InputPropType } from "./input.type";
+
 import { wordCompareResult } from "@/constants/wordCompareResult";
 
 import inputStyles from "./input.module.scss";
-
-type InputPropType = {
-  value: string;
-  status: string | undefined;
-  isFlipped: boolean;
-};
 
 function Input(props: InputPropType): JSX.Element {
   const { value, status, isFlipped } = props;

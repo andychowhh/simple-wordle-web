@@ -40,6 +40,7 @@ function InputGroup({ inputValue }: InputGroupPropType) {
   return (
     <animated.div
       className={inputGroupStyles.input__group}
+      arial-label="input-group"
       style={{ ...styles }}
     >
       {[...Array(5)].map((_, index) => {
