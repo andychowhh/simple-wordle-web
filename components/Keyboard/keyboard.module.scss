@@ -1,6 +1,4 @@
-$background-color-matched: green;
-$background-color-included: rgb(201, 180, 88);
-$background-color-not-included: rgb(120, 124, 126);
+@import "@/styles/variables.scss";
 
 .keyboard__matched {
   background-color: $background-color-matched !important;

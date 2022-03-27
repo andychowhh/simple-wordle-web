@@ -1,8 +1,6 @@
-$size: 60px;
+@import "@/styles/variables.scss";
 
-$background-color-matched: green;
-$background-color-included: rgb(201, 180, 88);
-$background-color-not-included: rgb(120, 124, 126);
+$size: 60px;
 
 .input {
   display: inline-flex;
