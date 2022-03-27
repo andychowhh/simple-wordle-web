@@ -33,9 +33,15 @@ function Input(props: InputPropType): JSX.Element {
       flipSpeedBackToFront={2}
       flipSpeedFrontToBack={2}
     >
-      <input {...getInputProps({ className: inputStyles.input })} />
       <input
         {...getInputProps({
+          "aria-label": "input",
+          className: inputStyles.input,
+        })}
+      />
+      <input
+        {...getInputProps({
+          "aria-label": "flipped-input",
           className: `${inputStyles.input} ${inputFlippedClass}`,
         })}
       />
