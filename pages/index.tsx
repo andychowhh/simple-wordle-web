@@ -15,7 +15,7 @@ import useKeyboard from "@/hooks/useKeyboard";
 import useRandomWord from "@/hooks/useRandomWord";
 
 // Styles
-import styles from "@/styles/Home.module.scss";
+import styles from "@/styles/home.module.scss";
 import "react-toastify/dist/ReactToastify.css";
 
 const Home: NextPage = () => {
