@@ -1,5 +1,7 @@
 This is a clone project of a word guessing game. Developed using NextJs, Typescript
 
+[Demo](https://simple-wordle-web.herokuapp.com/)
+
 ## Getting Started
 
 Then, install the required package:
