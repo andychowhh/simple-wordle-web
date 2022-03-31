@@ -14,7 +14,7 @@ function MyApp({ Component, pageProps }: AppProps) {
           name="description"
           content="Simple Wordle Web is a clone project of a word guessing game. Do you want to play it infinitely? Here you are."
         />
-        <meta name="keywords" content="wordle, word-guess" />
+        <meta name="keywords" content="wordle, word-guess, english words" />
         <meta name="og:title" content="Simple Wordle Web" />
         <meta
           name="og:description"
