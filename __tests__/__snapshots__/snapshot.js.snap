@@ -1,385 +1,2870 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`renders homepage unchanged 1`] = `
-<div>
-  <div
-    class="container"
-  >
+Object {
+  "asFragment": [Function],
+  "baseElement": <body>
+    <div>
+      <div
+        id="home"
+      >
+        <div
+          class="input__group__container"
+        >
+          <div
+            arial-label="input-group"
+            class="input__group"
+            style="transform: none;"
+          >
+            <div
+              class="react-card-flip"
+              style="z-index: auto;"
+            >
+              <div
+                class="react-card-flipper"
+                style="height: 100%; position: relative; width: 100%;"
+              >
+                <div
+                  class="react-card-front"
+                  style="height: 100%; left: 0px; position: relative; top: 0px; transform: rotateY(0deg); transition: 2s; width: 100%; z-index: 2;"
+                >
+                  <input
+                    aria-label="input"
+                    class="input"
+                    disabled=""
+                    maxlength="1"
+                    type="text"
+                    value=""
+                  />
+                </div>
+                <div
+                  class="react-card-back"
+                  style="height: 100%; left: 0px; position: absolute; top: 0px; transform: rotateY(-180deg); transition: 2s; width: 100%;"
+                >
+                  <input
+                    aria-label="flipped-input"
+                    class="input input__not__included"
+                    disabled=""
+                    maxlength="1"
+                    type="text"
+                    value=""
+                  />
+                </div>
+              </div>
+            </div>
+            <div
+              class="react-card-flip"
+              style="z-index: auto;"
+            >
+              <div
+                class="react-card-flipper"
+                style="height: 100%; position: relative; width: 100%;"
+              >
+                <div
+                  class="react-card-front"
+                  style="height: 100%; left: 0px; position: relative; top: 0px; transform: rotateY(0deg); transition: 2s; width: 100%; z-index: 2;"
+                >
+                  <input
+                    aria-label="input"
+                    class="input"
+                    disabled=""
+                    maxlength="1"
+                    type="text"
+                    value=""
+                  />
+                </div>
+                <div
+                  class="react-card-back"
+                  style="height: 100%; left: 0px; position: absolute; top: 0px; transform: rotateY(-180deg); transition: 2s; width: 100%;"
+                >
+                  <input
+                    aria-label="flipped-input"
+                    class="input input__not__included"
+                    disabled=""
+                    maxlength="1"
+                    type="text"
+                    value=""
+                  />
+                </div>
+              </div>
+            </div>
+            <div
+              class="react-card-flip"
+              style="z-index: auto;"
+            >
+              <div
+                class="react-card-flipper"
+                style="height: 100%; position: relative; width: 100%;"
+              >
+                <div
+                  class="react-card-front"
+                  style="height: 100%; left: 0px; position: relative; top: 0px; transform: rotateY(0deg); transition: 2s; width: 100%; z-index: 2;"
+                >
+                  <input
+                    aria-label="input"
+                    class="input"
+                    disabled=""
+                    maxlength="1"
+                    type="text"
+                    value=""
+                  />
+                </div>
+                <div
+                  class="react-card-back"
+                  style="height: 100%; left: 0px; position: absolute; top: 0px; transform: rotateY(-180deg); transition: 2s; width: 100%;"
+                >
+                  <input
+                    aria-label="flipped-input"
+                    class="input input__not__included"
+                    disabled=""
+                    maxlength="1"
+                    type="text"
+                    value=""
+                  />
+                </div>
+              </div>
+            </div>
+            <div
+              class="react-card-flip"
+              style="z-index: auto;"
+            >
+              <div
+                class="react-card-flipper"
+                style="height: 100%; position: relative; width: 100%;"
+              >
+                <div
+                  class="react-card-front"
+                  style="height: 100%; left: 0px; position: relative; top: 0px; transform: rotateY(0deg); transition: 2s; width: 100%; z-index: 2;"
+                >
+                  <input
+                    aria-label="input"
+                    class="input"
+                    disabled=""
+                    maxlength="1"
+                    type="text"
+                    value=""
+                  />
+                </div>
+                <div
+                  class="react-card-back"
+                  style="height: 100%; left: 0px; position: absolute; top: 0px; transform: rotateY(-180deg); transition: 2s; width: 100%;"
+                >
+                  <input
+                    aria-label="flipped-input"
+                    class="input input__not__included"
+                    disabled=""
+                    maxlength="1"
+                    type="text"
+                    value=""
+                  />
+                </div>
+              </div>
+            </div>
+            <div
+              class="react-card-flip"
+              style="z-index: auto;"
+            >
+              <div
+                class="react-card-flipper"
+                style="height: 100%; position: relative; width: 100%;"
+              >
+                <div
+                  class="react-card-front"
+                  style="height: 100%; left: 0px; position: relative; top: 0px; transform: rotateY(0deg); transition: 2s; width: 100%; z-index: 2;"
+                >
+                  <input
+                    aria-label="input"
+                    class="input"
+                    disabled=""
+                    maxlength="1"
+                    type="text"
+                    value=""
+                  />
+                </div>
+                <div
+                  class="react-card-back"
+                  style="height: 100%; left: 0px; position: absolute; top: 0px; transform: rotateY(-180deg); transition: 2s; width: 100%;"
+                >
+                  <input
+                    aria-label="flipped-input"
+                    class="input input__not__included"
+                    disabled=""
+                    maxlength="1"
+                    type="text"
+                    value=""
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            arial-label="input-group"
+            class="input__group"
+            style="transform: none;"
+          >
+            <div
+              class="react-card-flip"
+              style="z-index: auto;"
+            >
+              <div
+                class="react-card-flipper"
+                style="height: 100%; position: relative; width: 100%;"
+              >
+                <div
+                  class="react-card-front"
+                  style="height: 100%; left: 0px; position: relative; top: 0px; transform: rotateY(0deg); transition: 2s; width: 100%; z-index: 2;"
+                >
+                  <input
+                    aria-label="input"
+                    class="input"
+                    disabled=""
+                    maxlength="1"
+                    type="text"
+                    value=""
+                  />
+                </div>
+                <div
+                  class="react-card-back"
+                  style="height: 100%; left: 0px; position: absolute; top: 0px; transform: rotateY(-180deg); transition: 2s; width: 100%;"
+                >
+                  <input
+                    aria-label="flipped-input"
+                    class="input input__not__included"
+                    disabled=""
+                    maxlength="1"
+                    type="text"
+                    value=""
+                  />
+                </div>
+              </div>
+            </div>
+            <div
+              class="react-card-flip"
+              style="z-index: auto;"
+            >
+              <div
+                class="react-card-flipper"
+                style="height: 100%; position: relative; width: 100%;"
+              >
+                <div
+                  class="react-card-front"
+                  style="height: 100%; left: 0px; position: relative; top: 0px; transform: rotateY(0deg); transition: 2s; width: 100%; z-index: 2;"
+                >
+                  <input
+                    aria-label="input"
+                    class="input"
+                    disabled=""
+                    maxlength="1"
+                    type="text"
+                    value=""
+                  />
+                </div>
+                <div
+                  class="react-card-back"
+                  style="height: 100%; left: 0px; position: absolute; top: 0px; transform: rotateY(-180deg); transition: 2s; width: 100%;"
+                >
+                  <input
+                    aria-label="flipped-input"
+                    class="input input__not__included"
+                    disabled=""
+                    maxlength="1"
+                    type="text"
+                    value=""
+                  />
+                </div>
+              </div>
+            </div>
+            <div
+              class="react-card-flip"
+              style="z-index: auto;"
+            >
+              <div
+                class="react-card-flipper"
+                style="height: 100%; position: relative; width: 100%;"
+              >
+                <div
+                  class="react-card-front"
+                  style="height: 100%; left: 0px; position: relative; top: 0px; transform: rotateY(0deg); transition: 2s; width: 100%; z-index: 2;"
+                >
+                  <input
+                    aria-label="input"
+                    class="input"
+                    disabled=""
+                    maxlength="1"
+                    type="text"
+                    value=""
+                  />
+                </div>
+                <div
+                  class="react-card-back"
+                  style="height: 100%; left: 0px; position: absolute; top: 0px; transform: rotateY(-180deg); transition: 2s; width: 100%;"
+                >
+                  <input
+                    aria-label="flipped-input"
+                    class="input input__not__included"
+                    disabled=""
+                    maxlength="1"
+                    type="text"
+                    value=""
+                  />
+                </div>
+              </div>
+            </div>
+            <div
+              class="react-card-flip"
+              style="z-index: auto;"
+            >
+              <div
+                class="react-card-flipper"
+                style="height: 100%; position: relative; width: 100%;"
+              >
+                <div
+                  class="react-card-front"
+                  style="height: 100%; left: 0px; position: relative; top: 0px; transform: rotateY(0deg); transition: 2s; width: 100%; z-index: 2;"
+                >
+                  <input
+                    aria-label="input"
+                    class="input"
+                    disabled=""
+                    maxlength="1"
+                    type="text"
+                    value=""
+                  />
+                </div>
+                <div
+                  class="react-card-back"
+                  style="height: 100%; left: 0px; position: absolute; top: 0px; transform: rotateY(-180deg); transition: 2s; width: 100%;"
+                >
+                  <input
+                    aria-label="flipped-input"
+                    class="input input__not__included"
+                    disabled=""
+                    maxlength="1"
+                    type="text"
+                    value=""
+                  />
+                </div>
+              </div>
+            </div>
+            <div
+              class="react-card-flip"
+              style="z-index: auto;"
+            >
+              <div
+                class="react-card-flipper"
+                style="height: 100%; position: relative; width: 100%;"
+              >
+                <div
+                  class="react-card-front"
+                  style="height: 100%; left: 0px; position: relative; top: 0px; transform: rotateY(0deg); transition: 2s; width: 100%; z-index: 2;"
+                >
+                  <input
+                    aria-label="input"
+                    class="input"
+                    disabled=""
+                    maxlength="1"
+                    type="text"
+                    value=""
+                  />
+                </div>
+                <div
+                  class="react-card-back"
+                  style="height: 100%; left: 0px; position: absolute; top: 0px; transform: rotateY(-180deg); transition: 2s; width: 100%;"
+                >
+                  <input
+                    aria-label="flipped-input"
+                    class="input input__not__included"
+                    disabled=""
+                    maxlength="1"
+                    type="text"
+                    value=""
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            arial-label="input-group"
+            class="input__group"
+            style="transform: none;"
+          >
+            <div
+              class="react-card-flip"
+              style="z-index: auto;"
+            >
+              <div
+                class="react-card-flipper"
+                style="height: 100%; position: relative; width: 100%;"
+              >
+                <div
+                  class="react-card-front"
+                  style="height: 100%; left: 0px; position: relative; top: 0px; transform: rotateY(0deg); transition: 2s; width: 100%; z-index: 2;"
+                >
+                  <input
+                    aria-label="input"
+                    class="input"
+                    disabled=""
+                    maxlength="1"
+                    type="text"
+                    value=""
+                  />
+                </div>
+                <div
+                  class="react-card-back"
+                  style="height: 100%; left: 0px; position: absolute; top: 0px; transform: rotateY(-180deg); transition: 2s; width: 100%;"
+                >
+                  <input
+                    aria-label="flipped-input"
+                    class="input input__not__included"
+                    disabled=""
+                    maxlength="1"
+                    type="text"
+                    value=""
+                  />
+                </div>
+              </div>
+            </div>
+            <div
+              class="react-card-flip"
+              style="z-index: auto;"
+            >
+              <div
+                class="react-card-flipper"
+                style="height: 100%; position: relative; width: 100%;"
+              >
+                <div
+                  class="react-card-front"
+                  style="height: 100%; left: 0px; position: relative; top: 0px; transform: rotateY(0deg); transition: 2s; width: 100%; z-index: 2;"
+                >
+                  <input
+                    aria-label="input"
+                    class="input"
+                    disabled=""
+                    maxlength="1"
+                    type="text"
+                    value=""
+                  />
+                </div>
+                <div
+                  class="react-card-back"
+                  style="height: 100%; left: 0px; position: absolute; top: 0px; transform: rotateY(-180deg); transition: 2s; width: 100%;"
+                >
+                  <input
+                    aria-label="flipped-input"
+                    class="input input__not__included"
+                    disabled=""
+                    maxlength="1"
+                    type="text"
+                    value=""
+                  />
+                </div>
+              </div>
+            </div>
+            <div
+              class="react-card-flip"
+              style="z-index: auto;"
+            >
+              <div
+                class="react-card-flipper"
+                style="height: 100%; position: relative; width: 100%;"
+              >
+                <div
+                  class="react-card-front"
+                  style="height: 100%; left: 0px; position: relative; top: 0px; transform: rotateY(0deg); transition: 2s; width: 100%; z-index: 2;"
+                >
+                  <input
+                    aria-label="input"
+                    class="input"
+                    disabled=""
+                    maxlength="1"
+                    type="text"
+                    value=""
+                  />
+                </div>
+                <div
+                  class="react-card-back"
+                  style="height: 100%; left: 0px; position: absolute; top: 0px; transform: rotateY(-180deg); transition: 2s; width: 100%;"
+                >
+                  <input
+                    aria-label="flipped-input"
+                    class="input input__not__included"
+                    disabled=""
+                    maxlength="1"
+                    type="text"
+                    value=""
+                  />
+                </div>
+              </div>
+            </div>
+            <div
+              class="react-card-flip"
+              style="z-index: auto;"
+            >
+              <div
+                class="react-card-flipper"
+                style="height: 100%; position: relative; width: 100%;"
+              >
+                <div
+                  class="react-card-front"
+                  style="height: 100%; left: 0px; position: relative; top: 0px; transform: rotateY(0deg); transition: 2s; width: 100%; z-index: 2;"
+                >
+                  <input
+                    aria-label="input"
+                    class="input"
+                    disabled=""
+                    maxlength="1"
+                    type="text"
+                    value=""
+                  />
+                </div>
+                <div
+                  class="react-card-back"
+                  style="height: 100%; left: 0px; position: absolute; top: 0px; transform: rotateY(-180deg); transition: 2s; width: 100%;"
+                >
+                  <input
+                    aria-label="flipped-input"
+                    class="input input__not__included"
+                    disabled=""
+                    maxlength="1"
+                    type="text"
+                    value=""
+                  />
+                </div>
+              </div>
+            </div>
+            <div
+              class="react-card-flip"
+              style="z-index: auto;"
+            >
+              <div
+                class="react-card-flipper"
+                style="height: 100%; position: relative; width: 100%;"
+              >
+                <div
+                  class="react-card-front"
+                  style="height: 100%; left: 0px; position: relative; top: 0px; transform: rotateY(0deg); transition: 2s; width: 100%; z-index: 2;"
+                >
+                  <input
+                    aria-label="input"
+                    class="input"
+                    disabled=""
+                    maxlength="1"
+                    type="text"
+                    value=""
+                  />
+                </div>
+                <div
+                  class="react-card-back"
+                  style="height: 100%; left: 0px; position: absolute; top: 0px; transform: rotateY(-180deg); transition: 2s; width: 100%;"
+                >
+                  <input
+                    aria-label="flipped-input"
+                    class="input input__not__included"
+                    disabled=""
+                    maxlength="1"
+                    type="text"
+                    value=""
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            arial-label="input-group"
+            class="input__group"
+            style="transform: none;"
+          >
+            <div
+              class="react-card-flip"
+              style="z-index: auto;"
+            >
+              <div
+                class="react-card-flipper"
+                style="height: 100%; position: relative; width: 100%;"
+              >
+                <div
+                  class="react-card-front"
+                  style="height: 100%; left: 0px; position: relative; top: 0px; transform: rotateY(0deg); transition: 2s; width: 100%; z-index: 2;"
+                >
+                  <input
+                    aria-label="input"
+                    class="input"
+                    disabled=""
+                    maxlength="1"
+                    type="text"
+                    value=""
+                  />
+                </div>
+                <div
+                  class="react-card-back"
+                  style="height: 100%; left: 0px; position: absolute; top: 0px; transform: rotateY(-180deg); transition: 2s; width: 100%;"
+                >
+                  <input
+                    aria-label="flipped-input"
+                    class="input input__not__included"
+                    disabled=""
+                    maxlength="1"
+                    type="text"
+                    value=""
+                  />
+                </div>
+              </div>
+            </div>
+            <div
+              class="react-card-flip"
+              style="z-index: auto;"
+            >
+              <div
+                class="react-card-flipper"
+                style="height: 100%; position: relative; width: 100%;"
+              >
+                <div
+                  class="react-card-front"
+                  style="height: 100%; left: 0px; position: relative; top: 0px; transform: rotateY(0deg); transition: 2s; width: 100%; z-index: 2;"
+                >
+                  <input
+                    aria-label="input"
+                    class="input"
+                    disabled=""
+                    maxlength="1"
+                    type="text"
+                    value=""
+                  />
+                </div>
+                <div
+                  class="react-card-back"
+                  style="height: 100%; left: 0px; position: absolute; top: 0px; transform: rotateY(-180deg); transition: 2s; width: 100%;"
+                >
+                  <input
+                    aria-label="flipped-input"
+                    class="input input__not__included"
+                    disabled=""
+                    maxlength="1"
+                    type="text"
+                    value=""
+                  />
+                </div>
+              </div>
+            </div>
+            <div
+              class="react-card-flip"
+              style="z-index: auto;"
+            >
+              <div
+                class="react-card-flipper"
+                style="height: 100%; position: relative; width: 100%;"
+              >
+                <div
+                  class="react-card-front"
+                  style="height: 100%; left: 0px; position: relative; top: 0px; transform: rotateY(0deg); transition: 2s; width: 100%; z-index: 2;"
+                >
+                  <input
+                    aria-label="input"
+                    class="input"
+                    disabled=""
+                    maxlength="1"
+                    type="text"
+                    value=""
+                  />
+                </div>
+                <div
+                  class="react-card-back"
+                  style="height: 100%; left: 0px; position: absolute; top: 0px; transform: rotateY(-180deg); transition: 2s; width: 100%;"
+                >
+                  <input
+                    aria-label="flipped-input"
+                    class="input input__not__included"
+                    disabled=""
+                    maxlength="1"
+                    type="text"
+                    value=""
+                  />
+                </div>
+              </div>
+            </div>
+            <div
+              class="react-card-flip"
+              style="z-index: auto;"
+            >
+              <div
+                class="react-card-flipper"
+                style="height: 100%; position: relative; width: 100%;"
+              >
+                <div
+                  class="react-card-front"
+                  style="height: 100%; left: 0px; position: relative; top: 0px; transform: rotateY(0deg); transition: 2s; width: 100%; z-index: 2;"
+                >
+                  <input
+                    aria-label="input"
+                    class="input"
+                    disabled=""
+                    maxlength="1"
+                    type="text"
+                    value=""
+                  />
+                </div>
+                <div
+                  class="react-card-back"
+                  style="height: 100%; left: 0px; position: absolute; top: 0px; transform: rotateY(-180deg); transition: 2s; width: 100%;"
+                >
+                  <input
+                    aria-label="flipped-input"
+                    class="input input__not__included"
+                    disabled=""
+                    maxlength="1"
+                    type="text"
+                    value=""
+                  />
+                </div>
+              </div>
+            </div>
+            <div
+              class="react-card-flip"
+              style="z-index: auto;"
+            >
+              <div
+                class="react-card-flipper"
+                style="height: 100%; position: relative; width: 100%;"
+              >
+                <div
+                  class="react-card-front"
+                  style="height: 100%; left: 0px; position: relative; top: 0px; transform: rotateY(0deg); transition: 2s; width: 100%; z-index: 2;"
+                >
+                  <input
+                    aria-label="input"
+                    class="input"
+                    disabled=""
+                    maxlength="1"
+                    type="text"
+                    value=""
+                  />
+                </div>
+                <div
+                  class="react-card-back"
+                  style="height: 100%; left: 0px; position: absolute; top: 0px; transform: rotateY(-180deg); transition: 2s; width: 100%;"
+                >
+                  <input
+                    aria-label="flipped-input"
+                    class="input input__not__included"
+                    disabled=""
+                    maxlength="1"
+                    type="text"
+                    value=""
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            arial-label="input-group"
+            class="input__group"
+            style="transform: none;"
+          >
+            <div
+              class="react-card-flip"
+              style="z-index: auto;"
+            >
+              <div
+                class="react-card-flipper"
+                style="height: 100%; position: relative; width: 100%;"
+              >
+                <div
+                  class="react-card-front"
+                  style="height: 100%; left: 0px; position: relative; top: 0px; transform: rotateY(0deg); transition: 2s; width: 100%; z-index: 2;"
+                >
+                  <input
+                    aria-label="input"
+                    class="input"
+                    disabled=""
+                    maxlength="1"
+                    type="text"
+                    value=""
+                  />
+                </div>
+                <div
+                  class="react-card-back"
+                  style="height: 100%; left: 0px; position: absolute; top: 0px; transform: rotateY(-180deg); transition: 2s; width: 100%;"
+                >
+                  <input
+                    aria-label="flipped-input"
+                    class="input input__not__included"
+                    disabled=""
+                    maxlength="1"
+                    type="text"
+                    value=""
+                  />
+                </div>
+              </div>
+            </div>
+            <div
+              class="react-card-flip"
+              style="z-index: auto;"
+            >
+              <div
+                class="react-card-flipper"
+                style="height: 100%; position: relative; width: 100%;"
+              >
+                <div
+                  class="react-card-front"
+                  style="height: 100%; left: 0px; position: relative; top: 0px; transform: rotateY(0deg); transition: 2s; width: 100%; z-index: 2;"
+                >
+                  <input
+                    aria-label="input"
+                    class="input"
+                    disabled=""
+                    maxlength="1"
+                    type="text"
+                    value=""
+                  />
+                </div>
+                <div
+                  class="react-card-back"
+                  style="height: 100%; left: 0px; position: absolute; top: 0px; transform: rotateY(-180deg); transition: 2s; width: 100%;"
+                >
+                  <input
+                    aria-label="flipped-input"
+                    class="input input__not__included"
+                    disabled=""
+                    maxlength="1"
+                    type="text"
+                    value=""
+                  />
+                </div>
+              </div>
+            </div>
+            <div
+              class="react-card-flip"
+              style="z-index: auto;"
+            >
+              <div
+                class="react-card-flipper"
+                style="height: 100%; position: relative; width: 100%;"
+              >
+                <div
+                  class="react-card-front"
+                  style="height: 100%; left: 0px; position: relative; top: 0px; transform: rotateY(0deg); transition: 2s; width: 100%; z-index: 2;"
+                >
+                  <input
+                    aria-label="input"
+                    class="input"
+                    disabled=""
+                    maxlength="1"
+                    type="text"
+                    value=""
+                  />
+                </div>
+                <div
+                  class="react-card-back"
+                  style="height: 100%; left: 0px; position: absolute; top: 0px; transform: rotateY(-180deg); transition: 2s; width: 100%;"
+                >
+                  <input
+                    aria-label="flipped-input"
+                    class="input input__not__included"
+                    disabled=""
+                    maxlength="1"
+                    type="text"
+                    value=""
+                  />
+                </div>
+              </div>
+            </div>
+            <div
+              class="react-card-flip"
+              style="z-index: auto;"
+            >
+              <div
+                class="react-card-flipper"
+                style="height: 100%; position: relative; width: 100%;"
+              >
+                <div
+                  class="react-card-front"
+                  style="height: 100%; left: 0px; position: relative; top: 0px; transform: rotateY(0deg); transition: 2s; width: 100%; z-index: 2;"
+                >
+                  <input
+                    aria-label="input"
+                    class="input"
+                    disabled=""
+                    maxlength="1"
+                    type="text"
+                    value=""
+                  />
+                </div>
+                <div
+                  class="react-card-back"
+                  style="height: 100%; left: 0px; position: absolute; top: 0px; transform: rotateY(-180deg); transition: 2s; width: 100%;"
+                >
+                  <input
+                    aria-label="flipped-input"
+                    class="input input__not__included"
+                    disabled=""
+                    maxlength="1"
+                    type="text"
+                    value=""
+                  />
+                </div>
+              </div>
+            </div>
+            <div
+              class="react-card-flip"
+              style="z-index: auto;"
+            >
+              <div
+                class="react-card-flipper"
+                style="height: 100%; position: relative; width: 100%;"
+              >
+                <div
+                  class="react-card-front"
+                  style="height: 100%; left: 0px; position: relative; top: 0px; transform: rotateY(0deg); transition: 2s; width: 100%; z-index: 2;"
+                >
+                  <input
+                    aria-label="input"
+                    class="input"
+                    disabled=""
+                    maxlength="1"
+                    type="text"
+                    value=""
+                  />
+                </div>
+                <div
+                  class="react-card-back"
+                  style="height: 100%; left: 0px; position: absolute; top: 0px; transform: rotateY(-180deg); transition: 2s; width: 100%;"
+                >
+                  <input
+                    aria-label="flipped-input"
+                    class="input input__not__included"
+                    disabled=""
+                    maxlength="1"
+                    type="text"
+                    value=""
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            arial-label="input-group"
+            class="input__group"
+            style="transform: none;"
+          >
+            <div
+              class="react-card-flip"
+              style="z-index: auto;"
+            >
+              <div
+                class="react-card-flipper"
+                style="height: 100%; position: relative; width: 100%;"
+              >
+                <div
+                  class="react-card-front"
+                  style="height: 100%; left: 0px; position: relative; top: 0px; transform: rotateY(0deg); transition: 2s; width: 100%; z-index: 2;"
+                >
+                  <input
+                    aria-label="input"
+                    class="input"
+                    disabled=""
+                    maxlength="1"
+                    type="text"
+                    value=""
+                  />
+                </div>
+                <div
+                  class="react-card-back"
+                  style="height: 100%; left: 0px; position: absolute; top: 0px; transform: rotateY(-180deg); transition: 2s; width: 100%;"
+                >
+                  <input
+                    aria-label="flipped-input"
+                    class="input input__not__included"
+                    disabled=""
+                    maxlength="1"
+                    type="text"
+                    value=""
+                  />
+                </div>
+              </div>
+            </div>
+            <div
+              class="react-card-flip"
+              style="z-index: auto;"
+            >
+              <div
+                class="react-card-flipper"
+                style="height: 100%; position: relative; width: 100%;"
+              >
+                <div
+                  class="react-card-front"
+                  style="height: 100%; left: 0px; position: relative; top: 0px; transform: rotateY(0deg); transition: 2s; width: 100%; z-index: 2;"
+                >
+                  <input
+                    aria-label="input"
+                    class="input"
+                    disabled=""
+                    maxlength="1"
+                    type="text"
+                    value=""
+                  />
+                </div>
+                <div
+                  class="react-card-back"
+                  style="height: 100%; left: 0px; position: absolute; top: 0px; transform: rotateY(-180deg); transition: 2s; width: 100%;"
+                >
+                  <input
+                    aria-label="flipped-input"
+                    class="input input__not__included"
+                    disabled=""
+                    maxlength="1"
+                    type="text"
+                    value=""
+                  />
+                </div>
+              </div>
+            </div>
+            <div
+              class="react-card-flip"
+              style="z-index: auto;"
+            >
+              <div
+                class="react-card-flipper"
+                style="height: 100%; position: relative; width: 100%;"
+              >
+                <div
+                  class="react-card-front"
+                  style="height: 100%; left: 0px; position: relative; top: 0px; transform: rotateY(0deg); transition: 2s; width: 100%; z-index: 2;"
+                >
+                  <input
+                    aria-label="input"
+                    class="input"
+                    disabled=""
+                    maxlength="1"
+                    type="text"
+                    value=""
+                  />
+                </div>
+                <div
+                  class="react-card-back"
+                  style="height: 100%; left: 0px; position: absolute; top: 0px; transform: rotateY(-180deg); transition: 2s; width: 100%;"
+                >
+                  <input
+                    aria-label="flipped-input"
+                    class="input input__not__included"
+                    disabled=""
+                    maxlength="1"
+                    type="text"
+                    value=""
+                  />
+                </div>
+              </div>
+            </div>
+            <div
+              class="react-card-flip"
+              style="z-index: auto;"
+            >
+              <div
+                class="react-card-flipper"
+                style="height: 100%; position: relative; width: 100%;"
+              >
+                <div
+                  class="react-card-front"
+                  style="height: 100%; left: 0px; position: relative; top: 0px; transform: rotateY(0deg); transition: 2s; width: 100%; z-index: 2;"
+                >
+                  <input
+                    aria-label="input"
+                    class="input"
+                    disabled=""
+                    maxlength="1"
+                    type="text"
+                    value=""
+                  />
+                </div>
+                <div
+                  class="react-card-back"
+                  style="height: 100%; left: 0px; position: absolute; top: 0px; transform: rotateY(-180deg); transition: 2s; width: 100%;"
+                >
+                  <input
+                    aria-label="flipped-input"
+                    class="input input__not__included"
+                    disabled=""
+                    maxlength="1"
+                    type="text"
+                    value=""
+                  />
+                </div>
+              </div>
+            </div>
+            <div
+              class="react-card-flip"
+              style="z-index: auto;"
+            >
+              <div
+                class="react-card-flipper"
+                style="height: 100%; position: relative; width: 100%;"
+              >
+                <div
+                  class="react-card-front"
+                  style="height: 100%; left: 0px; position: relative; top: 0px; transform: rotateY(0deg); transition: 2s; width: 100%; z-index: 2;"
+                >
+                  <input
+                    aria-label="input"
+                    class="input"
+                    disabled=""
+                    maxlength="1"
+                    type="text"
+                    value=""
+                  />
+                </div>
+                <div
+                  class="react-card-back"
+                  style="height: 100%; left: 0px; position: absolute; top: 0px; transform: rotateY(-180deg); transition: 2s; width: 100%;"
+                >
+                  <input
+                    aria-label="flipped-input"
+                    class="input input__not__included"
+                    disabled=""
+                    maxlength="1"
+                    type="text"
+                    value=""
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          class="keyboard__container"
+        >
+          <div
+            class="react-simple-keyboard simple-keyboard hg-theme-default hg-layout-default"
+          >
+            <div
+              class="hg-rows"
+            >
+              <div
+                class="hg-row"
+              >
+                <div
+                  class="hg-button hg-standardBtn"
+                  data-skbtn="Q"
+                  data-skbtnuid="default-r0b0"
+                >
+                  <span>
+                    Q
+                  </span>
+                </div>
+                <div
+                  class="hg-button hg-standardBtn"
+                  data-skbtn="W"
+                  data-skbtnuid="default-r0b1"
+                >
+                  <span>
+                    W
+                  </span>
+                </div>
+                <div
+                  class="hg-button hg-standardBtn"
+                  data-skbtn="E"
+                  data-skbtnuid="default-r0b2"
+                >
+                  <span>
+                    E
+                  </span>
+                </div>
+                <div
+                  class="hg-button hg-standardBtn"
+                  data-skbtn="R"
+                  data-skbtnuid="default-r0b3"
+                >
+                  <span>
+                    R
+                  </span>
+                </div>
+                <div
+                  class="hg-button hg-standardBtn"
+                  data-skbtn="T"
+                  data-skbtnuid="default-r0b4"
+                >
+                  <span>
+                    T
+                  </span>
+                </div>
+                <div
+                  class="hg-button hg-standardBtn"
+                  data-skbtn="Y"
+                  data-skbtnuid="default-r0b5"
+                >
+                  <span>
+                    Y
+                  </span>
+                </div>
+                <div
+                  class="hg-button hg-standardBtn"
+                  data-skbtn="U"
+                  data-skbtnuid="default-r0b6"
+                >
+                  <span>
+                    U
+                  </span>
+                </div>
+                <div
+                  class="hg-button hg-standardBtn"
+                  data-skbtn="I"
+                  data-skbtnuid="default-r0b7"
+                >
+                  <span>
+                    I
+                  </span>
+                </div>
+                <div
+                  class="hg-button hg-standardBtn"
+                  data-skbtn="O"
+                  data-skbtnuid="default-r0b8"
+                >
+                  <span>
+                    O
+                  </span>
+                </div>
+                <div
+                  class="hg-button hg-standardBtn"
+                  data-skbtn="P"
+                  data-skbtnuid="default-r0b9"
+                >
+                  <span>
+                    P
+                  </span>
+                </div>
+              </div>
+              <div
+                class="hg-row"
+              >
+                <div
+                  class="hg-button hg-standardBtn"
+                  data-skbtn="A"
+                  data-skbtnuid="default-r1b0"
+                >
+                  <span>
+                    A
+                  </span>
+                </div>
+                <div
+                  class="hg-button hg-standardBtn"
+                  data-skbtn="S"
+                  data-skbtnuid="default-r1b1"
+                >
+                  <span>
+                    S
+                  </span>
+                </div>
+                <div
+                  class="hg-button hg-standardBtn"
+                  data-skbtn="D"
+                  data-skbtnuid="default-r1b2"
+                >
+                  <span>
+                    D
+                  </span>
+                </div>
+                <div
+                  class="hg-button hg-standardBtn"
+                  data-skbtn="F"
+                  data-skbtnuid="default-r1b3"
+                >
+                  <span>
+                    F
+                  </span>
+                </div>
+                <div
+                  class="hg-button hg-standardBtn"
+                  data-skbtn="G"
+                  data-skbtnuid="default-r1b4"
+                >
+                  <span>
+                    G
+                  </span>
+                </div>
+                <div
+                  class="hg-button hg-standardBtn"
+                  data-skbtn="H"
+                  data-skbtnuid="default-r1b5"
+                >
+                  <span>
+                    H
+                  </span>
+                </div>
+                <div
+                  class="hg-button hg-standardBtn"
+                  data-skbtn="J"
+                  data-skbtnuid="default-r1b6"
+                >
+                  <span>
+                    J
+                  </span>
+                </div>
+                <div
+                  class="hg-button hg-standardBtn"
+                  data-skbtn="K"
+                  data-skbtnuid="default-r1b7"
+                >
+                  <span>
+                    K
+                  </span>
+                </div>
+                <div
+                  class="hg-button hg-standardBtn"
+                  data-skbtn="L"
+                  data-skbtnuid="default-r1b8"
+                >
+                  <span>
+                    L
+                  </span>
+                </div>
+              </div>
+              <div
+                class="hg-row"
+              >
+                <div
+                  class="hg-button hg-functionBtn hg-button-enter"
+                  data-skbtn="{enter}"
+                  data-skbtnuid="default-r2b0"
+                >
+                  <span>
+                    ENTER
+                  </span>
+                </div>
+                <div
+                  class="hg-button hg-standardBtn"
+                  data-skbtn="Z"
+                  data-skbtnuid="default-r2b1"
+                >
+                  <span>
+                    Z
+                  </span>
+                </div>
+                <div
+                  class="hg-button hg-standardBtn"
+                  data-skbtn="X"
+                  data-skbtnuid="default-r2b2"
+                >
+                  <span>
+                    X
+                  </span>
+                </div>
+                <div
+                  class="hg-button hg-standardBtn"
+                  data-skbtn="C"
+                  data-skbtnuid="default-r2b3"
+                >
+                  <span>
+                    C
+                  </span>
+                </div>
+                <div
+                  class="hg-button hg-standardBtn"
+                  data-skbtn="V"
+                  data-skbtnuid="default-r2b4"
+                >
+                  <span>
+                    V
+                  </span>
+                </div>
+                <div
+                  class="hg-button hg-standardBtn"
+                  data-skbtn="B"
+                  data-skbtnuid="default-r2b5"
+                >
+                  <span>
+                    B
+                  </span>
+                </div>
+                <div
+                  class="hg-button hg-standardBtn"
+                  data-skbtn="N"
+                  data-skbtnuid="default-r2b6"
+                >
+                  <span>
+                    N
+                  </span>
+                </div>
+                <div
+                  class="hg-button hg-standardBtn"
+                  data-skbtn="M"
+                  data-skbtnuid="default-r2b7"
+                >
+                  <span>
+                    M
+                  </span>
+                </div>
+                <div
+                  class="hg-button hg-functionBtn hg-button-bksp"
+                  data-skbtn="{bksp}"
+                  data-skbtnuid="default-r2b8"
+                >
+                  <span>
+                    DELETE
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        class="Toastify"
+      />
+    </div>
+  </body>,
+  "container": <div>
     <div
-      class="input__container"
-      style="display: flex;"
+      id="home"
     >
       <div
-        style="display: flex; align-items: center;"
+        class="input__group__container"
       >
-        <input
-          aria-label="Please enter verification code. Character 1"
-          autocomplete="off"
-          class="input__item  "
-          data-testid="input-0"
-          maxlength="1"
-          style="width: 1em; text-align: center;"
-          type="text"
-          value=""
-        />
+        <div
+          arial-label="input-group"
+          class="input__group"
+          style="transform: none;"
+        >
+          <div
+            class="react-card-flip"
+            style="z-index: auto;"
+          >
+            <div
+              class="react-card-flipper"
+              style="height: 100%; position: relative; width: 100%;"
+            >
+              <div
+                class="react-card-front"
+                style="height: 100%; left: 0px; position: relative; top: 0px; transform: rotateY(0deg); transition: 2s; width: 100%; z-index: 2;"
+              >
+                <input
+                  aria-label="input"
+                  class="input"
+                  disabled=""
+                  maxlength="1"
+                  type="text"
+                  value=""
+                />
+              </div>
+              <div
+                class="react-card-back"
+                style="height: 100%; left: 0px; position: absolute; top: 0px; transform: rotateY(-180deg); transition: 2s; width: 100%;"
+              >
+                <input
+                  aria-label="flipped-input"
+                  class="input input__not__included"
+                  disabled=""
+                  maxlength="1"
+                  type="text"
+                  value=""
+                />
+              </div>
+            </div>
+          </div>
+          <div
+            class="react-card-flip"
+            style="z-index: auto;"
+          >
+            <div
+              class="react-card-flipper"
+              style="height: 100%; position: relative; width: 100%;"
+            >
+              <div
+                class="react-card-front"
+                style="height: 100%; left: 0px; position: relative; top: 0px; transform: rotateY(0deg); transition: 2s; width: 100%; z-index: 2;"
+              >
+                <input
+                  aria-label="input"
+                  class="input"
+                  disabled=""
+                  maxlength="1"
+                  type="text"
+                  value=""
+                />
+              </div>
+              <div
+                class="react-card-back"
+                style="height: 100%; left: 0px; position: absolute; top: 0px; transform: rotateY(-180deg); transition: 2s; width: 100%;"
+              >
+                <input
+                  aria-label="flipped-input"
+                  class="input input__not__included"
+                  disabled=""
+                  maxlength="1"
+                  type="text"
+                  value=""
+                />
+              </div>
+            </div>
+          </div>
+          <div
+            class="react-card-flip"
+            style="z-index: auto;"
+          >
+            <div
+              class="react-card-flipper"
+              style="height: 100%; position: relative; width: 100%;"
+            >
+              <div
+                class="react-card-front"
+                style="height: 100%; left: 0px; position: relative; top: 0px; transform: rotateY(0deg); transition: 2s; width: 100%; z-index: 2;"
+              >
+                <input
+                  aria-label="input"
+                  class="input"
+                  disabled=""
+                  maxlength="1"
+                  type="text"
+                  value=""
+                />
+              </div>
+              <div
+                class="react-card-back"
+                style="height: 100%; left: 0px; position: absolute; top: 0px; transform: rotateY(-180deg); transition: 2s; width: 100%;"
+              >
+                <input
+                  aria-label="flipped-input"
+                  class="input input__not__included"
+                  disabled=""
+                  maxlength="1"
+                  type="text"
+                  value=""
+                />
+              </div>
+            </div>
+          </div>
+          <div
+            class="react-card-flip"
+            style="z-index: auto;"
+          >
+            <div
+              class="react-card-flipper"
+              style="height: 100%; position: relative; width: 100%;"
+            >
+              <div
+                class="react-card-front"
+                style="height: 100%; left: 0px; position: relative; top: 0px; transform: rotateY(0deg); transition: 2s; width: 100%; z-index: 2;"
+              >
+                <input
+                  aria-label="input"
+                  class="input"
+                  disabled=""
+                  maxlength="1"
+                  type="text"
+                  value=""
+                />
+              </div>
+              <div
+                class="react-card-back"
+                style="height: 100%; left: 0px; position: absolute; top: 0px; transform: rotateY(-180deg); transition: 2s; width: 100%;"
+              >
+                <input
+                  aria-label="flipped-input"
+                  class="input input__not__included"
+                  disabled=""
+                  maxlength="1"
+                  type="text"
+                  value=""
+                />
+              </div>
+            </div>
+          </div>
+          <div
+            class="react-card-flip"
+            style="z-index: auto;"
+          >
+            <div
+              class="react-card-flipper"
+              style="height: 100%; position: relative; width: 100%;"
+            >
+              <div
+                class="react-card-front"
+                style="height: 100%; left: 0px; position: relative; top: 0px; transform: rotateY(0deg); transition: 2s; width: 100%; z-index: 2;"
+              >
+                <input
+                  aria-label="input"
+                  class="input"
+                  disabled=""
+                  maxlength="1"
+                  type="text"
+                  value=""
+                />
+              </div>
+              <div
+                class="react-card-back"
+                style="height: 100%; left: 0px; position: absolute; top: 0px; transform: rotateY(-180deg); transition: 2s; width: 100%;"
+              >
+                <input
+                  aria-label="flipped-input"
+                  class="input input__not__included"
+                  disabled=""
+                  maxlength="1"
+                  type="text"
+                  value=""
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          arial-label="input-group"
+          class="input__group"
+          style="transform: none;"
+        >
+          <div
+            class="react-card-flip"
+            style="z-index: auto;"
+          >
+            <div
+              class="react-card-flipper"
+              style="height: 100%; position: relative; width: 100%;"
+            >
+              <div
+                class="react-card-front"
+                style="height: 100%; left: 0px; position: relative; top: 0px; transform: rotateY(0deg); transition: 2s; width: 100%; z-index: 2;"
+              >
+                <input
+                  aria-label="input"
+                  class="input"
+                  disabled=""
+                  maxlength="1"
+                  type="text"
+                  value=""
+                />
+              </div>
+              <div
+                class="react-card-back"
+                style="height: 100%; left: 0px; position: absolute; top: 0px; transform: rotateY(-180deg); transition: 2s; width: 100%;"
+              >
+                <input
+                  aria-label="flipped-input"
+                  class="input input__not__included"
+                  disabled=""
+                  maxlength="1"
+                  type="text"
+                  value=""
+                />
+              </div>
+            </div>
+          </div>
+          <div
+            class="react-card-flip"
+            style="z-index: auto;"
+          >
+            <div
+              class="react-card-flipper"
+              style="height: 100%; position: relative; width: 100%;"
+            >
+              <div
+                class="react-card-front"
+                style="height: 100%; left: 0px; position: relative; top: 0px; transform: rotateY(0deg); transition: 2s; width: 100%; z-index: 2;"
+              >
+                <input
+                  aria-label="input"
+                  class="input"
+                  disabled=""
+                  maxlength="1"
+                  type="text"
+                  value=""
+                />
+              </div>
+              <div
+                class="react-card-back"
+                style="height: 100%; left: 0px; position: absolute; top: 0px; transform: rotateY(-180deg); transition: 2s; width: 100%;"
+              >
+                <input
+                  aria-label="flipped-input"
+                  class="input input__not__included"
+                  disabled=""
+                  maxlength="1"
+                  type="text"
+                  value=""
+                />
+              </div>
+            </div>
+          </div>
+          <div
+            class="react-card-flip"
+            style="z-index: auto;"
+          >
+            <div
+              class="react-card-flipper"
+              style="height: 100%; position: relative; width: 100%;"
+            >
+              <div
+                class="react-card-front"
+                style="height: 100%; left: 0px; position: relative; top: 0px; transform: rotateY(0deg); transition: 2s; width: 100%; z-index: 2;"
+              >
+                <input
+                  aria-label="input"
+                  class="input"
+                  disabled=""
+                  maxlength="1"
+                  type="text"
+                  value=""
+                />
+              </div>
+              <div
+                class="react-card-back"
+                style="height: 100%; left: 0px; position: absolute; top: 0px; transform: rotateY(-180deg); transition: 2s; width: 100%;"
+              >
+                <input
+                  aria-label="flipped-input"
+                  class="input input__not__included"
+                  disabled=""
+                  maxlength="1"
+                  type="text"
+                  value=""
+                />
+              </div>
+            </div>
+          </div>
+          <div
+            class="react-card-flip"
+            style="z-index: auto;"
+          >
+            <div
+              class="react-card-flipper"
+              style="height: 100%; position: relative; width: 100%;"
+            >
+              <div
+                class="react-card-front"
+                style="height: 100%; left: 0px; position: relative; top: 0px; transform: rotateY(0deg); transition: 2s; width: 100%; z-index: 2;"
+              >
+                <input
+                  aria-label="input"
+                  class="input"
+                  disabled=""
+                  maxlength="1"
+                  type="text"
+                  value=""
+                />
+              </div>
+              <div
+                class="react-card-back"
+                style="height: 100%; left: 0px; position: absolute; top: 0px; transform: rotateY(-180deg); transition: 2s; width: 100%;"
+              >
+                <input
+                  aria-label="flipped-input"
+                  class="input input__not__included"
+                  disabled=""
+                  maxlength="1"
+                  type="text"
+                  value=""
+                />
+              </div>
+            </div>
+          </div>
+          <div
+            class="react-card-flip"
+            style="z-index: auto;"
+          >
+            <div
+              class="react-card-flipper"
+              style="height: 100%; position: relative; width: 100%;"
+            >
+              <div
+                class="react-card-front"
+                style="height: 100%; left: 0px; position: relative; top: 0px; transform: rotateY(0deg); transition: 2s; width: 100%; z-index: 2;"
+              >
+                <input
+                  aria-label="input"
+                  class="input"
+                  disabled=""
+                  maxlength="1"
+                  type="text"
+                  value=""
+                />
+              </div>
+              <div
+                class="react-card-back"
+                style="height: 100%; left: 0px; position: absolute; top: 0px; transform: rotateY(-180deg); transition: 2s; width: 100%;"
+              >
+                <input
+                  aria-label="flipped-input"
+                  class="input input__not__included"
+                  disabled=""
+                  maxlength="1"
+                  type="text"
+                  value=""
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          arial-label="input-group"
+          class="input__group"
+          style="transform: none;"
+        >
+          <div
+            class="react-card-flip"
+            style="z-index: auto;"
+          >
+            <div
+              class="react-card-flipper"
+              style="height: 100%; position: relative; width: 100%;"
+            >
+              <div
+                class="react-card-front"
+                style="height: 100%; left: 0px; position: relative; top: 0px; transform: rotateY(0deg); transition: 2s; width: 100%; z-index: 2;"
+              >
+                <input
+                  aria-label="input"
+                  class="input"
+                  disabled=""
+                  maxlength="1"
+                  type="text"
+                  value=""
+                />
+              </div>
+              <div
+                class="react-card-back"
+                style="height: 100%; left: 0px; position: absolute; top: 0px; transform: rotateY(-180deg); transition: 2s; width: 100%;"
+              >
+                <input
+                  aria-label="flipped-input"
+                  class="input input__not__included"
+                  disabled=""
+                  maxlength="1"
+                  type="text"
+                  value=""
+                />
+              </div>
+            </div>
+          </div>
+          <div
+            class="react-card-flip"
+            style="z-index: auto;"
+          >
+            <div
+              class="react-card-flipper"
+              style="height: 100%; position: relative; width: 100%;"
+            >
+              <div
+                class="react-card-front"
+                style="height: 100%; left: 0px; position: relative; top: 0px; transform: rotateY(0deg); transition: 2s; width: 100%; z-index: 2;"
+              >
+                <input
+                  aria-label="input"
+                  class="input"
+                  disabled=""
+                  maxlength="1"
+                  type="text"
+                  value=""
+                />
+              </div>
+              <div
+                class="react-card-back"
+                style="height: 100%; left: 0px; position: absolute; top: 0px; transform: rotateY(-180deg); transition: 2s; width: 100%;"
+              >
+                <input
+                  aria-label="flipped-input"
+                  class="input input__not__included"
+                  disabled=""
+                  maxlength="1"
+                  type="text"
+                  value=""
+                />
+              </div>
+            </div>
+          </div>
+          <div
+            class="react-card-flip"
+            style="z-index: auto;"
+          >
+            <div
+              class="react-card-flipper"
+              style="height: 100%; position: relative; width: 100%;"
+            >
+              <div
+                class="react-card-front"
+                style="height: 100%; left: 0px; position: relative; top: 0px; transform: rotateY(0deg); transition: 2s; width: 100%; z-index: 2;"
+              >
+                <input
+                  aria-label="input"
+                  class="input"
+                  disabled=""
+                  maxlength="1"
+                  type="text"
+                  value=""
+                />
+              </div>
+              <div
+                class="react-card-back"
+                style="height: 100%; left: 0px; position: absolute; top: 0px; transform: rotateY(-180deg); transition: 2s; width: 100%;"
+              >
+                <input
+                  aria-label="flipped-input"
+                  class="input input__not__included"
+                  disabled=""
+                  maxlength="1"
+                  type="text"
+                  value=""
+                />
+              </div>
+            </div>
+          </div>
+          <div
+            class="react-card-flip"
+            style="z-index: auto;"
+          >
+            <div
+              class="react-card-flipper"
+              style="height: 100%; position: relative; width: 100%;"
+            >
+              <div
+                class="react-card-front"
+                style="height: 100%; left: 0px; position: relative; top: 0px; transform: rotateY(0deg); transition: 2s; width: 100%; z-index: 2;"
+              >
+                <input
+                  aria-label="input"
+                  class="input"
+                  disabled=""
+                  maxlength="1"
+                  type="text"
+                  value=""
+                />
+              </div>
+              <div
+                class="react-card-back"
+                style="height: 100%; left: 0px; position: absolute; top: 0px; transform: rotateY(-180deg); transition: 2s; width: 100%;"
+              >
+                <input
+                  aria-label="flipped-input"
+                  class="input input__not__included"
+                  disabled=""
+                  maxlength="1"
+                  type="text"
+                  value=""
+                />
+              </div>
+            </div>
+          </div>
+          <div
+            class="react-card-flip"
+            style="z-index: auto;"
+          >
+            <div
+              class="react-card-flipper"
+              style="height: 100%; position: relative; width: 100%;"
+            >
+              <div
+                class="react-card-front"
+                style="height: 100%; left: 0px; position: relative; top: 0px; transform: rotateY(0deg); transition: 2s; width: 100%; z-index: 2;"
+              >
+                <input
+                  aria-label="input"
+                  class="input"
+                  disabled=""
+                  maxlength="1"
+                  type="text"
+                  value=""
+                />
+              </div>
+              <div
+                class="react-card-back"
+                style="height: 100%; left: 0px; position: absolute; top: 0px; transform: rotateY(-180deg); transition: 2s; width: 100%;"
+              >
+                <input
+                  aria-label="flipped-input"
+                  class="input input__not__included"
+                  disabled=""
+                  maxlength="1"
+                  type="text"
+                  value=""
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          arial-label="input-group"
+          class="input__group"
+          style="transform: none;"
+        >
+          <div
+            class="react-card-flip"
+            style="z-index: auto;"
+          >
+            <div
+              class="react-card-flipper"
+              style="height: 100%; position: relative; width: 100%;"
+            >
+              <div
+                class="react-card-front"
+                style="height: 100%; left: 0px; position: relative; top: 0px; transform: rotateY(0deg); transition: 2s; width: 100%; z-index: 2;"
+              >
+                <input
+                  aria-label="input"
+                  class="input"
+                  disabled=""
+                  maxlength="1"
+                  type="text"
+                  value=""
+                />
+              </div>
+              <div
+                class="react-card-back"
+                style="height: 100%; left: 0px; position: absolute; top: 0px; transform: rotateY(-180deg); transition: 2s; width: 100%;"
+              >
+                <input
+                  aria-label="flipped-input"
+                  class="input input__not__included"
+                  disabled=""
+                  maxlength="1"
+                  type="text"
+                  value=""
+                />
+              </div>
+            </div>
+          </div>
+          <div
+            class="react-card-flip"
+            style="z-index: auto;"
+          >
+            <div
+              class="react-card-flipper"
+              style="height: 100%; position: relative; width: 100%;"
+            >
+              <div
+                class="react-card-front"
+                style="height: 100%; left: 0px; position: relative; top: 0px; transform: rotateY(0deg); transition: 2s; width: 100%; z-index: 2;"
+              >
+                <input
+                  aria-label="input"
+                  class="input"
+                  disabled=""
+                  maxlength="1"
+                  type="text"
+                  value=""
+                />
+              </div>
+              <div
+                class="react-card-back"
+                style="height: 100%; left: 0px; position: absolute; top: 0px; transform: rotateY(-180deg); transition: 2s; width: 100%;"
+              >
+                <input
+                  aria-label="flipped-input"
+                  class="input input__not__included"
+                  disabled=""
+                  maxlength="1"
+                  type="text"
+                  value=""
+                />
+              </div>
+            </div>
+          </div>
+          <div
+            class="react-card-flip"
+            style="z-index: auto;"
+          >
+            <div
+              class="react-card-flipper"
+              style="height: 100%; position: relative; width: 100%;"
+            >
+              <div
+                class="react-card-front"
+                style="height: 100%; left: 0px; position: relative; top: 0px; transform: rotateY(0deg); transition: 2s; width: 100%; z-index: 2;"
+              >
+                <input
+                  aria-label="input"
+                  class="input"
+                  disabled=""
+                  maxlength="1"
+                  type="text"
+                  value=""
+                />
+              </div>
+              <div
+                class="react-card-back"
+                style="height: 100%; left: 0px; position: absolute; top: 0px; transform: rotateY(-180deg); transition: 2s; width: 100%;"
+              >
+                <input
+                  aria-label="flipped-input"
+                  class="input input__not__included"
+                  disabled=""
+                  maxlength="1"
+                  type="text"
+                  value=""
+                />
+              </div>
+            </div>
+          </div>
+          <div
+            class="react-card-flip"
+            style="z-index: auto;"
+          >
+            <div
+              class="react-card-flipper"
+              style="height: 100%; position: relative; width: 100%;"
+            >
+              <div
+                class="react-card-front"
+                style="height: 100%; left: 0px; position: relative; top: 0px; transform: rotateY(0deg); transition: 2s; width: 100%; z-index: 2;"
+              >
+                <input
+                  aria-label="input"
+                  class="input"
+                  disabled=""
+                  maxlength="1"
+                  type="text"
+                  value=""
+                />
+              </div>
+              <div
+                class="react-card-back"
+                style="height: 100%; left: 0px; position: absolute; top: 0px; transform: rotateY(-180deg); transition: 2s; width: 100%;"
+              >
+                <input
+                  aria-label="flipped-input"
+                  class="input input__not__included"
+                  disabled=""
+                  maxlength="1"
+                  type="text"
+                  value=""
+                />
+              </div>
+            </div>
+          </div>
+          <div
+            class="react-card-flip"
+            style="z-index: auto;"
+          >
+            <div
+              class="react-card-flipper"
+              style="height: 100%; position: relative; width: 100%;"
+            >
+              <div
+                class="react-card-front"
+                style="height: 100%; left: 0px; position: relative; top: 0px; transform: rotateY(0deg); transition: 2s; width: 100%; z-index: 2;"
+              >
+                <input
+                  aria-label="input"
+                  class="input"
+                  disabled=""
+                  maxlength="1"
+                  type="text"
+                  value=""
+                />
+              </div>
+              <div
+                class="react-card-back"
+                style="height: 100%; left: 0px; position: absolute; top: 0px; transform: rotateY(-180deg); transition: 2s; width: 100%;"
+              >
+                <input
+                  aria-label="flipped-input"
+                  class="input input__not__included"
+                  disabled=""
+                  maxlength="1"
+                  type="text"
+                  value=""
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          arial-label="input-group"
+          class="input__group"
+          style="transform: none;"
+        >
+          <div
+            class="react-card-flip"
+            style="z-index: auto;"
+          >
+            <div
+              class="react-card-flipper"
+              style="height: 100%; position: relative; width: 100%;"
+            >
+              <div
+                class="react-card-front"
+                style="height: 100%; left: 0px; position: relative; top: 0px; transform: rotateY(0deg); transition: 2s; width: 100%; z-index: 2;"
+              >
+                <input
+                  aria-label="input"
+                  class="input"
+                  disabled=""
+                  maxlength="1"
+                  type="text"
+                  value=""
+                />
+              </div>
+              <div
+                class="react-card-back"
+                style="height: 100%; left: 0px; position: absolute; top: 0px; transform: rotateY(-180deg); transition: 2s; width: 100%;"
+              >
+                <input
+                  aria-label="flipped-input"
+                  class="input input__not__included"
+                  disabled=""
+                  maxlength="1"
+                  type="text"
+                  value=""
+                />
+              </div>
+            </div>
+          </div>
+          <div
+            class="react-card-flip"
+            style="z-index: auto;"
+          >
+            <div
+              class="react-card-flipper"
+              style="height: 100%; position: relative; width: 100%;"
+            >
+              <div
+                class="react-card-front"
+                style="height: 100%; left: 0px; position: relative; top: 0px; transform: rotateY(0deg); transition: 2s; width: 100%; z-index: 2;"
+              >
+                <input
+                  aria-label="input"
+                  class="input"
+                  disabled=""
+                  maxlength="1"
+                  type="text"
+                  value=""
+                />
+              </div>
+              <div
+                class="react-card-back"
+                style="height: 100%; left: 0px; position: absolute; top: 0px; transform: rotateY(-180deg); transition: 2s; width: 100%;"
+              >
+                <input
+                  aria-label="flipped-input"
+                  class="input input__not__included"
+                  disabled=""
+                  maxlength="1"
+                  type="text"
+                  value=""
+                />
+              </div>
+            </div>
+          </div>
+          <div
+            class="react-card-flip"
+            style="z-index: auto;"
+          >
+            <div
+              class="react-card-flipper"
+              style="height: 100%; position: relative; width: 100%;"
+            >
+              <div
+                class="react-card-front"
+                style="height: 100%; left: 0px; position: relative; top: 0px; transform: rotateY(0deg); transition: 2s; width: 100%; z-index: 2;"
+              >
+                <input
+                  aria-label="input"
+                  class="input"
+                  disabled=""
+                  maxlength="1"
+                  type="text"
+                  value=""
+                />
+              </div>
+              <div
+                class="react-card-back"
+                style="height: 100%; left: 0px; position: absolute; top: 0px; transform: rotateY(-180deg); transition: 2s; width: 100%;"
+              >
+                <input
+                  aria-label="flipped-input"
+                  class="input input__not__included"
+                  disabled=""
+                  maxlength="1"
+                  type="text"
+                  value=""
+                />
+              </div>
+            </div>
+          </div>
+          <div
+            class="react-card-flip"
+            style="z-index: auto;"
+          >
+            <div
+              class="react-card-flipper"
+              style="height: 100%; position: relative; width: 100%;"
+            >
+              <div
+                class="react-card-front"
+                style="height: 100%; left: 0px; position: relative; top: 0px; transform: rotateY(0deg); transition: 2s; width: 100%; z-index: 2;"
+              >
+                <input
+                  aria-label="input"
+                  class="input"
+                  disabled=""
+                  maxlength="1"
+                  type="text"
+                  value=""
+                />
+              </div>
+              <div
+                class="react-card-back"
+                style="height: 100%; left: 0px; position: absolute; top: 0px; transform: rotateY(-180deg); transition: 2s; width: 100%;"
+              >
+                <input
+                  aria-label="flipped-input"
+                  class="input input__not__included"
+                  disabled=""
+                  maxlength="1"
+                  type="text"
+                  value=""
+                />
+              </div>
+            </div>
+          </div>
+          <div
+            class="react-card-flip"
+            style="z-index: auto;"
+          >
+            <div
+              class="react-card-flipper"
+              style="height: 100%; position: relative; width: 100%;"
+            >
+              <div
+                class="react-card-front"
+                style="height: 100%; left: 0px; position: relative; top: 0px; transform: rotateY(0deg); transition: 2s; width: 100%; z-index: 2;"
+              >
+                <input
+                  aria-label="input"
+                  class="input"
+                  disabled=""
+                  maxlength="1"
+                  type="text"
+                  value=""
+                />
+              </div>
+              <div
+                class="react-card-back"
+                style="height: 100%; left: 0px; position: absolute; top: 0px; transform: rotateY(-180deg); transition: 2s; width: 100%;"
+              >
+                <input
+                  aria-label="flipped-input"
+                  class="input input__not__included"
+                  disabled=""
+                  maxlength="1"
+                  type="text"
+                  value=""
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          arial-label="input-group"
+          class="input__group"
+          style="transform: none;"
+        >
+          <div
+            class="react-card-flip"
+            style="z-index: auto;"
+          >
+            <div
+              class="react-card-flipper"
+              style="height: 100%; position: relative; width: 100%;"
+            >
+              <div
+                class="react-card-front"
+                style="height: 100%; left: 0px; position: relative; top: 0px; transform: rotateY(0deg); transition: 2s; width: 100%; z-index: 2;"
+              >
+                <input
+                  aria-label="input"
+                  class="input"
+                  disabled=""
+                  maxlength="1"
+                  type="text"
+                  value=""
+                />
+              </div>
+              <div
+                class="react-card-back"
+                style="height: 100%; left: 0px; position: absolute; top: 0px; transform: rotateY(-180deg); transition: 2s; width: 100%;"
+              >
+                <input
+                  aria-label="flipped-input"
+                  class="input input__not__included"
+                  disabled=""
+                  maxlength="1"
+                  type="text"
+                  value=""
+                />
+              </div>
+            </div>
+          </div>
+          <div
+            class="react-card-flip"
+            style="z-index: auto;"
+          >
+            <div
+              class="react-card-flipper"
+              style="height: 100%; position: relative; width: 100%;"
+            >
+              <div
+                class="react-card-front"
+                style="height: 100%; left: 0px; position: relative; top: 0px; transform: rotateY(0deg); transition: 2s; width: 100%; z-index: 2;"
+              >
+                <input
+                  aria-label="input"
+                  class="input"
+                  disabled=""
+                  maxlength="1"
+                  type="text"
+                  value=""
+                />
+              </div>
+              <div
+                class="react-card-back"
+                style="height: 100%; left: 0px; position: absolute; top: 0px; transform: rotateY(-180deg); transition: 2s; width: 100%;"
+              >
+                <input
+                  aria-label="flipped-input"
+                  class="input input__not__included"
+                  disabled=""
+                  maxlength="1"
+                  type="text"
+                  value=""
+                />
+              </div>
+            </div>
+          </div>
+          <div
+            class="react-card-flip"
+            style="z-index: auto;"
+          >
+            <div
+              class="react-card-flipper"
+              style="height: 100%; position: relative; width: 100%;"
+            >
+              <div
+                class="react-card-front"
+                style="height: 100%; left: 0px; position: relative; top: 0px; transform: rotateY(0deg); transition: 2s; width: 100%; z-index: 2;"
+              >
+                <input
+                  aria-label="input"
+                  class="input"
+                  disabled=""
+                  maxlength="1"
+                  type="text"
+                  value=""
+                />
+              </div>
+              <div
+                class="react-card-back"
+                style="height: 100%; left: 0px; position: absolute; top: 0px; transform: rotateY(-180deg); transition: 2s; width: 100%;"
+              >
+                <input
+                  aria-label="flipped-input"
+                  class="input input__not__included"
+                  disabled=""
+                  maxlength="1"
+                  type="text"
+                  value=""
+                />
+              </div>
+            </div>
+          </div>
+          <div
+            class="react-card-flip"
+            style="z-index: auto;"
+          >
+            <div
+              class="react-card-flipper"
+              style="height: 100%; position: relative; width: 100%;"
+            >
+              <div
+                class="react-card-front"
+                style="height: 100%; left: 0px; position: relative; top: 0px; transform: rotateY(0deg); transition: 2s; width: 100%; z-index: 2;"
+              >
+                <input
+                  aria-label="input"
+                  class="input"
+                  disabled=""
+                  maxlength="1"
+                  type="text"
+                  value=""
+                />
+              </div>
+              <div
+                class="react-card-back"
+                style="height: 100%; left: 0px; position: absolute; top: 0px; transform: rotateY(-180deg); transition: 2s; width: 100%;"
+              >
+                <input
+                  aria-label="flipped-input"
+                  class="input input__not__included"
+                  disabled=""
+                  maxlength="1"
+                  type="text"
+                  value=""
+                />
+              </div>
+            </div>
+          </div>
+          <div
+            class="react-card-flip"
+            style="z-index: auto;"
+          >
+            <div
+              class="react-card-flipper"
+              style="height: 100%; position: relative; width: 100%;"
+            >
+              <div
+                class="react-card-front"
+                style="height: 100%; left: 0px; position: relative; top: 0px; transform: rotateY(0deg); transition: 2s; width: 100%; z-index: 2;"
+              >
+                <input
+                  aria-label="input"
+                  class="input"
+                  disabled=""
+                  maxlength="1"
+                  type="text"
+                  value=""
+                />
+              </div>
+              <div
+                class="react-card-back"
+                style="height: 100%; left: 0px; position: absolute; top: 0px; transform: rotateY(-180deg); transition: 2s; width: 100%;"
+              >
+                <input
+                  aria-label="flipped-input"
+                  class="input input__not__included"
+                  disabled=""
+                  maxlength="1"
+                  type="text"
+                  value=""
+                />
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
       <div
-        style="display: flex; align-items: center;"
+        class="keyboard__container"
       >
-        <input
-          aria-label="Character 2"
-          autocomplete="off"
-          class="input__item "
-          data-testid="input-1"
-          maxlength="1"
-          style="width: 1em; text-align: center;"
-          type="text"
-          value=""
-        />
-      </div>
-      <div
-        style="display: flex; align-items: center;"
-      >
-        <input
-          aria-label="Character 3"
-          autocomplete="off"
-          class="input__item "
-          data-testid="input-2"
-          maxlength="1"
-          style="width: 1em; text-align: center;"
-          type="text"
-          value=""
-        />
-      </div>
-      <div
-        style="display: flex; align-items: center;"
-      >
-        <input
-          aria-label="Character 4"
-          autocomplete="off"
-          class="input__item "
-          data-testid="input-3"
-          maxlength="1"
-          style="width: 1em; text-align: center;"
-          type="text"
-          value=""
-        />
-      </div>
-      <div
-        style="display: flex; align-items: center;"
-      >
-        <input
-          aria-label="Character 5"
-          autocomplete="off"
-          class="input__item "
-          data-testid="input-4"
-          maxlength="1"
-          style="width: 1em; text-align: center;"
-          type="text"
-          value=""
-        />
+        <div
+          class="react-simple-keyboard simple-keyboard hg-theme-default hg-layout-default"
+        >
+          <div
+            class="hg-rows"
+          >
+            <div
+              class="hg-row"
+            >
+              <div
+                class="hg-button hg-standardBtn"
+                data-skbtn="Q"
+                data-skbtnuid="default-r0b0"
+              >
+                <span>
+                  Q
+                </span>
+              </div>
+              <div
+                class="hg-button hg-standardBtn"
+                data-skbtn="W"
+                data-skbtnuid="default-r0b1"
+              >
+                <span>
+                  W
+                </span>
+              </div>
+              <div
+                class="hg-button hg-standardBtn"
+                data-skbtn="E"
+                data-skbtnuid="default-r0b2"
+              >
+                <span>
+                  E
+                </span>
+              </div>
+              <div
+                class="hg-button hg-standardBtn"
+                data-skbtn="R"
+                data-skbtnuid="default-r0b3"
+              >
+                <span>
+                  R
+                </span>
+              </div>
+              <div
+                class="hg-button hg-standardBtn"
+                data-skbtn="T"
+                data-skbtnuid="default-r0b4"
+              >
+                <span>
+                  T
+                </span>
+              </div>
+              <div
+                class="hg-button hg-standardBtn"
+                data-skbtn="Y"
+                data-skbtnuid="default-r0b5"
+              >
+                <span>
+                  Y
+                </span>
+              </div>
+              <div
+                class="hg-button hg-standardBtn"
+                data-skbtn="U"
+                data-skbtnuid="default-r0b6"
+              >
+                <span>
+                  U
+                </span>
+              </div>
+              <div
+                class="hg-button hg-standardBtn"
+                data-skbtn="I"
+                data-skbtnuid="default-r0b7"
+              >
+                <span>
+                  I
+                </span>
+              </div>
+              <div
+                class="hg-button hg-standardBtn"
+                data-skbtn="O"
+                data-skbtnuid="default-r0b8"
+              >
+                <span>
+                  O
+                </span>
+              </div>
+              <div
+                class="hg-button hg-standardBtn"
+                data-skbtn="P"
+                data-skbtnuid="default-r0b9"
+              >
+                <span>
+                  P
+                </span>
+              </div>
+            </div>
+            <div
+              class="hg-row"
+            >
+              <div
+                class="hg-button hg-standardBtn"
+                data-skbtn="A"
+                data-skbtnuid="default-r1b0"
+              >
+                <span>
+                  A
+                </span>
+              </div>
+              <div
+                class="hg-button hg-standardBtn"
+                data-skbtn="S"
+                data-skbtnuid="default-r1b1"
+              >
+                <span>
+                  S
+                </span>
+              </div>
+              <div
+                class="hg-button hg-standardBtn"
+                data-skbtn="D"
+                data-skbtnuid="default-r1b2"
+              >
+                <span>
+                  D
+                </span>
+              </div>
+              <div
+                class="hg-button hg-standardBtn"
+                data-skbtn="F"
+                data-skbtnuid="default-r1b3"
+              >
+                <span>
+                  F
+                </span>
+              </div>
+              <div
+                class="hg-button hg-standardBtn"
+                data-skbtn="G"
+                data-skbtnuid="default-r1b4"
+              >
+                <span>
+                  G
+                </span>
+              </div>
+              <div
+                class="hg-button hg-standardBtn"
+                data-skbtn="H"
+                data-skbtnuid="default-r1b5"
+              >
+                <span>
+                  H
+                </span>
+              </div>
+              <div
+                class="hg-button hg-standardBtn"
+                data-skbtn="J"
+                data-skbtnuid="default-r1b6"
+              >
+                <span>
+                  J
+                </span>
+              </div>
+              <div
+                class="hg-button hg-standardBtn"
+                data-skbtn="K"
+                data-skbtnuid="default-r1b7"
+              >
+                <span>
+                  K
+                </span>
+              </div>
+              <div
+                class="hg-button hg-standardBtn"
+                data-skbtn="L"
+                data-skbtnuid="default-r1b8"
+              >
+                <span>
+                  L
+                </span>
+              </div>
+            </div>
+            <div
+              class="hg-row"
+            >
+              <div
+                class="hg-button hg-functionBtn hg-button-enter"
+                data-skbtn="{enter}"
+                data-skbtnuid="default-r2b0"
+              >
+                <span>
+                  ENTER
+                </span>
+              </div>
+              <div
+                class="hg-button hg-standardBtn"
+                data-skbtn="Z"
+                data-skbtnuid="default-r2b1"
+              >
+                <span>
+                  Z
+                </span>
+              </div>
+              <div
+                class="hg-button hg-standardBtn"
+                data-skbtn="X"
+                data-skbtnuid="default-r2b2"
+              >
+                <span>
+                  X
+                </span>
+              </div>
+              <div
+                class="hg-button hg-standardBtn"
+                data-skbtn="C"
+                data-skbtnuid="default-r2b3"
+              >
+                <span>
+                  C
+                </span>
+              </div>
+              <div
+                class="hg-button hg-standardBtn"
+                data-skbtn="V"
+                data-skbtnuid="default-r2b4"
+              >
+                <span>
+                  V
+                </span>
+              </div>
+              <div
+                class="hg-button hg-standardBtn"
+                data-skbtn="B"
+                data-skbtnuid="default-r2b5"
+              >
+                <span>
+                  B
+                </span>
+              </div>
+              <div
+                class="hg-button hg-standardBtn"
+                data-skbtn="N"
+                data-skbtnuid="default-r2b6"
+              >
+                <span>
+                  N
+                </span>
+              </div>
+              <div
+                class="hg-button hg-standardBtn"
+                data-skbtn="M"
+                data-skbtnuid="default-r2b7"
+              >
+                <span>
+                  M
+                </span>
+              </div>
+              <div
+                class="hg-button hg-functionBtn hg-button-bksp"
+                data-skbtn="{bksp}"
+                data-skbtnuid="default-r2b8"
+              >
+                <span>
+                  DELETE
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
     <div
-      class="input__container"
-      style="display: flex;"
-    >
-      <div
-        style="display: flex; align-items: center;"
-      >
-        <input
-          aria-label="Please enter verification code. Character 1"
-          autocomplete="off"
-          class="input__item  "
-          data-testid="input-0"
-          maxlength="1"
-          style="width: 1em; text-align: center;"
-          type="text"
-          value=""
-        />
-      </div>
-      <div
-        style="display: flex; align-items: center;"
-      >
-        <input
-          aria-label="Character 2"
-          autocomplete="off"
-          class="input__item "
-          data-testid="input-1"
-          maxlength="1"
-          style="width: 1em; text-align: center;"
-          type="text"
-          value=""
-        />
-      </div>
-      <div
-        style="display: flex; align-items: center;"
-      >
-        <input
-          aria-label="Character 3"
-          autocomplete="off"
-          class="input__item "
-          data-testid="input-2"
-          maxlength="1"
-          style="width: 1em; text-align: center;"
-          type="text"
-          value=""
-        />
-      </div>
-      <div
-        style="display: flex; align-items: center;"
-      >
-        <input
-          aria-label="Character 4"
-          autocomplete="off"
-          class="input__item "
-          data-testid="input-3"
-          maxlength="1"
-          style="width: 1em; text-align: center;"
-          type="text"
-          value=""
-        />
-      </div>
-      <div
-        style="display: flex; align-items: center;"
-      >
-        <input
-          aria-label="Character 5"
-          autocomplete="off"
-          class="input__item "
-          data-testid="input-4"
-          maxlength="1"
-          style="width: 1em; text-align: center;"
-          type="text"
-          value=""
-        />
-      </div>
-    </div>
-    <div
-      class="input__container"
-      style="display: flex;"
-    >
-      <div
-        style="display: flex; align-items: center;"
-      >
-        <input
-          aria-label="Please enter verification code. Character 1"
-          autocomplete="off"
-          class="input__item  "
-          data-testid="input-0"
-          maxlength="1"
-          style="width: 1em; text-align: center;"
-          type="text"
-          value=""
-        />
-      </div>
-      <div
-        style="display: flex; align-items: center;"
-      >
-        <input
-          aria-label="Character 2"
-          autocomplete="off"
-          class="input__item "
-          data-testid="input-1"
-          maxlength="1"
-          style="width: 1em; text-align: center;"
-          type="text"
-          value=""
-        />
-      </div>
-      <div
-        style="display: flex; align-items: center;"
-      >
-        <input
-          aria-label="Character 3"
-          autocomplete="off"
-          class="input__item "
-          data-testid="input-2"
-          maxlength="1"
-          style="width: 1em; text-align: center;"
-          type="text"
-          value=""
-        />
-      </div>
-      <div
-        style="display: flex; align-items: center;"
-      >
-        <input
-          aria-label="Character 4"
-          autocomplete="off"
-          class="input__item "
-          data-testid="input-3"
-          maxlength="1"
-          style="width: 1em; text-align: center;"
-          type="text"
-          value=""
-        />
-      </div>
-      <div
-        style="display: flex; align-items: center;"
-      >
-        <input
-          aria-label="Character 5"
-          autocomplete="off"
-          class="input__item "
-          data-testid="input-4"
-          maxlength="1"
-          style="width: 1em; text-align: center;"
-          type="text"
-          value=""
-        />
-      </div>
-    </div>
-    <div
-      class="input__container"
-      style="display: flex;"
-    >
-      <div
-        style="display: flex; align-items: center;"
-      >
-        <input
-          aria-label="Please enter verification code. Character 1"
-          autocomplete="off"
-          class="input__item  "
-          data-testid="input-0"
-          maxlength="1"
-          style="width: 1em; text-align: center;"
-          type="text"
-          value=""
-        />
-      </div>
-      <div
-        style="display: flex; align-items: center;"
-      >
-        <input
-          aria-label="Character 2"
-          autocomplete="off"
-          class="input__item "
-          data-testid="input-1"
-          maxlength="1"
-          style="width: 1em; text-align: center;"
-          type="text"
-          value=""
-        />
-      </div>
-      <div
-        style="display: flex; align-items: center;"
-      >
-        <input
-          aria-label="Character 3"
-          autocomplete="off"
-          class="input__item "
-          data-testid="input-2"
-          maxlength="1"
-          style="width: 1em; text-align: center;"
-          type="text"
-          value=""
-        />
-      </div>
-      <div
-        style="display: flex; align-items: center;"
-      >
-        <input
-          aria-label="Character 4"
-          autocomplete="off"
-          class="input__item "
-          data-testid="input-3"
-          maxlength="1"
-          style="width: 1em; text-align: center;"
-          type="text"
-          value=""
-        />
-      </div>
-      <div
-        style="display: flex; align-items: center;"
-      >
-        <input
-          aria-label="Character 5"
-          autocomplete="off"
-          class="input__item "
-          data-testid="input-4"
-          maxlength="1"
-          style="width: 1em; text-align: center;"
-          type="text"
-          value=""
-        />
-      </div>
-    </div>
-    <div
-      class="input__container"
-      style="display: flex;"
-    >
-      <div
-        style="display: flex; align-items: center;"
-      >
-        <input
-          aria-label="Please enter verification code. Character 1"
-          autocomplete="off"
-          class="input__item  "
-          data-testid="input-0"
-          maxlength="1"
-          style="width: 1em; text-align: center;"
-          type="text"
-          value=""
-        />
-      </div>
-      <div
-        style="display: flex; align-items: center;"
-      >
-        <input
-          aria-label="Character 2"
-          autocomplete="off"
-          class="input__item "
-          data-testid="input-1"
-          maxlength="1"
-          style="width: 1em; text-align: center;"
-          type="text"
-          value=""
-        />
-      </div>
-      <div
-        style="display: flex; align-items: center;"
-      >
-        <input
-          aria-label="Character 3"
-          autocomplete="off"
-          class="input__item "
-          data-testid="input-2"
-          maxlength="1"
-          style="width: 1em; text-align: center;"
-          type="text"
-          value=""
-        />
-      </div>
-      <div
-        style="display: flex; align-items: center;"
-      >
-        <input
-          aria-label="Character 4"
-          autocomplete="off"
-          class="input__item "
-          data-testid="input-3"
-          maxlength="1"
-          style="width: 1em; text-align: center;"
-          type="text"
-          value=""
-        />
-      </div>
-      <div
-        style="display: flex; align-items: center;"
-      >
-        <input
-          aria-label="Character 5"
-          autocomplete="off"
-          class="input__item "
-          data-testid="input-4"
-          maxlength="1"
-          style="width: 1em; text-align: center;"
-          type="text"
-          value=""
-        />
-      </div>
-    </div>
-  </div>
-</div>
+      class="Toastify"
+    />
+  </div>,
+  "debug": [Function],
+  "findAllByAltText": [Function],
+  "findAllByDisplayValue": [Function],
+  "findAllByLabelText": [Function],
+  "findAllByPlaceholderText": [Function],
+  "findAllByRole": [Function],
+  "findAllByTestId": [Function],
+  "findAllByText": [Function],
+  "findAllByTitle": [Function],
+  "findByAltText": [Function],
+  "findByDisplayValue": [Function],
+  "findByLabelText": [Function],
+  "findByPlaceholderText": [Function],
+  "findByRole": [Function],
+  "findByTestId": [Function],
+  "findByText": [Function],
+  "findByTitle": [Function],
+  "getAllByAltText": [Function],
+  "getAllByDisplayValue": [Function],
+  "getAllByLabelText": [Function],
+  "getAllByPlaceholderText": [Function],
+  "getAllByRole": [Function],
+  "getAllByTestId": [Function],
+  "getAllByText": [Function],
+  "getAllByTitle": [Function],
+  "getByAltText": [Function],
+  "getByDisplayValue": [Function],
+  "getByLabelText": [Function],
+  "getByPlaceholderText": [Function],
+  "getByRole": [Function],
+  "getByTestId": [Function],
+  "getByText": [Function],
+  "getByTitle": [Function],
+  "queryAllByAltText": [Function],
+  "queryAllByDisplayValue": [Function],
+  "queryAllByLabelText": [Function],
+  "queryAllByPlaceholderText": [Function],
+  "queryAllByRole": [Function],
+  "queryAllByTestId": [Function],
+  "queryAllByText": [Function],
+  "queryAllByTitle": [Function],
+  "queryByAltText": [Function],
+  "queryByDisplayValue": [Function],
+  "queryByLabelText": [Function],
+  "queryByPlaceholderText": [Function],
+  "queryByRole": [Function],
+  "queryByTestId": [Function],
+  "queryByText": [Function],
+  "queryByTitle": [Function],
+  "rerender": [Function],
+  "unmount": [Function],
+}
 `;
