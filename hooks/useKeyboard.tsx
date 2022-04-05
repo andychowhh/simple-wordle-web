@@ -12,6 +12,7 @@ import {
 } from "@/types/types";
 
 import { wordCompareResult } from "@/constants/wordCompareResult";
+import { TOTAL_NUM_OF_ROW } from "@/constants/variables";
 
 function useKeyboard(
   selectedWord: string,
@@ -170,9 +171,7 @@ function useKeyboard(
               showToast("Great");
               setCurrentRow(-1);
             } else {
-              let totalNumOfRows: number = parseInt(
-                process.env.NEXT_PUBLIC_TOTAL_NUM_OF_ROW as string
-              );
+              let totalNumOfRows: number = TOTAL_NUM_OF_ROW;
               if (currentRow === totalNumOfRows - 1) {
                 // users've used all chances -> show answer
                 showToast(selectedWord);
