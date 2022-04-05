@@ -18,9 +18,11 @@ import useRandomWord from "@/hooks/useRandomWord";
 import styles from "@/styles/home.module.scss";
 import "react-toastify/dist/ReactToastify.css";
 
+import { TOTAL_NUM_OF_ROW } from "@/constants/variables";
+
 const Home: NextPage = () => {
   const [inputValues, setInputValues] = useState<Array<InputValueType>>(
-    [...Array(6)].map((_, index) => {
+    [...Array(TOTAL_NUM_OF_ROW)].map((_, index) => {
       return {
         id: index,
         value: [],
@@ -71,7 +73,7 @@ const Home: NextPage = () => {
           left: "50%",
           right: "50%",
           textAlign: "center",
-          fontWeight: "700"
+          fontWeight: "700",
         }}
       />
     </>
