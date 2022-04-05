@@ -1,0 +1,1 @@
+export const TOTAL_NUM_OF_ROW = 6;

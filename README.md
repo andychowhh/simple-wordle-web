@@ -4,7 +4,7 @@ This is a clone project of a word guessing game. Developed using NextJs, Typescr
 
 ## Getting Started
 
-Then, install the required package:
+First, install the required package:
 
 ```bash
 npm install
