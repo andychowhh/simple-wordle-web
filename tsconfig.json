@@ -22,6 +22,7 @@
       "@/constants/*": ["constants/*"],
       "@/utils/*": ["utils/*"],
       "@/types/*": ["types/*"],
+      "@/containers/*": ["containers/*"]
     }
   },
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"],

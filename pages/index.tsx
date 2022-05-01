@@ -1,11 +1,13 @@
 import React, { useState, useRef } from "react";
-import { ToastContainer, Zoom } from "react-toastify";
 
 import type { NextPage } from "next";
 
 // Components
 import KeyBoard from "@/components/Keyboard/keyboard";
 import InputGroup from "@/components/InputGroup/InputGroup";
+
+// Containers
+import ToastContainer from "@/containers/ToastContainer/ToastContainer";
 
 // types
 import { InputValueType } from "@/types/types";
@@ -46,7 +48,7 @@ const Home: NextPage = () => {
   );
 
   return (
-    <>
+    <ToastContainer>
       <div id={styles.home}>
         <div className={styles.input__group__container}>
           {inputValues.map((inputValue: InputValueType) => {
@@ -59,27 +61,7 @@ const Home: NextPage = () => {
           onKeyPress={onKeyPress}
         />
       </div>
-      <ToastContainer
-        transition={Zoom}
-        position="top-center"
-        autoClose={200}
-        hideProgressBar={true}
-        draggable={false}
-        closeButton={false}
-        style={{
-          transform: "none",
-          display: "flex",
-          flexDirection: "column",
-          justifyContent: "center",
-          alignItems: "center",
-          width: "auto",
-          left: "50%",
-          right: "50%",
-          textAlign: "center",
-          fontWeight: "700",
-        }}
-      />
-    </>
+    </ToastContainer>
   );
 };
 

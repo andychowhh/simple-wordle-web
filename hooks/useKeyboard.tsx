@@ -1,5 +1,4 @@
 import React, { useState, Dispatch, SetStateAction } from "react";
-import { toast } from "react-toastify";
 
 import { WORDS } from "@/constants/wordList";
 
@@ -13,6 +12,8 @@ import {
 
 import { wordCompareResult } from "@/constants/wordCompareResult";
 import { TOTAL_NUM_OF_ROW } from "@/constants/variables";
+
+import { showToast } from "@/containers/ToastContainer/ToastContainer";
 
 function useKeyboard(
   selectedWord: string,
@@ -52,19 +53,6 @@ function useKeyboard(
       return inputValue;
     });
     setInputValues(temp);
-  };
-
-  const showToast = (text: string): void => {
-    toast(text, {
-      autoClose: false,
-      style: {
-        backgroundColor: "black",
-        color: "#ffffff",
-        width: "150px",
-        height: "30px",
-        whiteSpace: "nowrap",
-      },
-    });
   };
 
   const onKeyPress = (button: string): void => {
