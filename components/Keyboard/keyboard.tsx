@@ -25,7 +25,7 @@ const KeyboardWrapper: FunctionComponent<IProps> = ({
   keyboardRef,
 }) => {
   let buttonTheme: Array<any> = wordResults
-    .map((wordResult: WordResultType) => {
+    .map((wordResult) => {
       if (Boolean(wordResult.characters)) {
         let theme: ButtonThemeType | undefined = undefined;
         switch (wordResult.status) {
