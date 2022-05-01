@@ -1,4 +1,4 @@
-import { wordCompare } from "@/utils/utils";
+import { wordCompare, generateRandomWord } from "@/utils/utils";
 import { wordCompareResult } from "@/constants/wordCompareResult";
 
 import { WordCompareResultType } from "@/types/types";
@@ -90,5 +90,18 @@ describe("Test for wordCompare", () => {
       },
     ];
     expect(comparedResult).toEqual(expectedResult);
+  });
+});
+
+describe("Test for genrateRandomWord", () => {
+  let word: string;
+  beforeEach(() => {
+    word = generateRandomWord();
+  });
+  it("generates a word with length 5", () => {
+    expect(word.length).toEqual(5);
+  });
+  it("generates a english word", () => {
+    expect(word).toMatch(/^[A-Z]*$/);
   });
 });

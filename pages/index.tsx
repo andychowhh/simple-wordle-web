@@ -12,13 +12,17 @@ import { InputValueType } from "@/types/types";
 
 // Hooks
 import useKeyboard from "@/hooks/useKeyboard";
-import useRandomWord from "@/hooks/useRandomWord";
 
 // Styles
 import styles from "@/styles/home.module.scss";
 import "react-toastify/dist/ReactToastify.css";
 
+// Utils
+import { generateRandomWord } from "@/utils/utils";
+
 import { TOTAL_NUM_OF_ROW } from "@/constants/variables";
+
+const selectedWord = generateRandomWord();
 
 const Home: NextPage = () => {
   const [inputValues, setInputValues] = useState<Array<InputValueType>>(
@@ -35,7 +39,6 @@ const Home: NextPage = () => {
   );
   const keyboardRef = useRef(null);
 
-  const selectedWord: string = useRandomWord();
   const { wordResults, onKeyPress } = useKeyboard(
     selectedWord,
     inputValues,
