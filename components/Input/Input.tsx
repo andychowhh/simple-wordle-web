@@ -7,9 +7,9 @@ import { wordCompareResult } from "@/constants/wordCompareResult";
 
 import inputStyles from "./input.module.scss";
 
-function Input(props: InputPropType): JSX.Element {
+function Input(props: InputPropType) {
   const { value, status, isFlipped } = props;
-  const inputFlippedClass: string =
+  const inputFlippedClass =
     status === wordCompareResult.characterMatched
       ? inputStyles.input__matched
       : status === wordCompareResult.characterIncluded
