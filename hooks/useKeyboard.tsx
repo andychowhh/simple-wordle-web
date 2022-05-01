@@ -41,18 +41,16 @@ function useKeyboard(
     inputValues: Array<InputValueType>,
     errorMsg: string
   ): void => {
-    let temp: Array<InputValueType> = inputValues.map(
-      (inputValue: InputValueType) => {
-        if (inputValue.id === currentRow) {
-          return {
-            ...inputValue,
-            isInvalid: true,
-            errorMessage: errorMsg,
-          };
-        }
-        return inputValue;
+    const temp = inputValues.map((inputValue) => {
+      if (inputValue.id === currentRow) {
+        return {
+          ...inputValue,
+          isInvalid: true,
+          errorMessage: errorMsg,
+        };
       }
-    );
+      return inputValue;
+    });
     setInputValues(temp);
   };
 
@@ -70,16 +68,13 @@ function useKeyboard(
   };
 
   const onKeyPress = (button: string): void => {
-    const inputValuesTemp: Array<InputValueType> = [...inputValues];
+    let inputValuesTemp = [...inputValues];
     // currentRow === -1 means the game ends
     if (currentRow !== -1) {
-      let currentRowValue: Array<string> = inputValuesTemp[currentRow]["value"];
+      const currentRowValue = inputValuesTemp[currentRow]["value"];
       if (button === "{bksp}") {
         if (currentRowValue.length > 0) {
-          let updatedInputValuesTemp: Array<string> = currentRowValue.slice(
-            0,
-            -1
-          );
+          const updatedInputValuesTemp = currentRowValue.slice(0, -1);
           inputValuesTemp[currentRow]["value"] = updatedInputValuesTemp;
           setInputValues(inputValuesTemp);
         }
@@ -87,24 +82,21 @@ function useKeyboard(
         if (currentRowValue.length === 5) {
           console.log(selectedWord);
           // check if the input is a valid word
-          let input: string = currentRowValue.join("").toLowerCase();
-          const isInputValid: boolean = WORDS.includes(input);
+          const input = currentRowValue.join("").toLowerCase();
+          const isInputValid = WORDS.includes(input);
           if (isInputValid) {
-            let currentRowValueTemp: Array<string> = currentRowValue;
-            let results: Array<WordCompareResultType> = wordCompare(
-              currentRowValueTemp,
-              selectedWord
-            );
+            const currentRowValueTemp = currentRowValue;
+            const results = wordCompare(currentRowValueTemp, selectedWord);
             // store the result and send it to Keyboard for the buttonTheme
-            let wordResultsTemp: Array<WordResultType> = [...wordResults];
+            let wordResultsTemp = [...wordResults];
             results.map((result: WordCompareResultType) => {
-              const isCharOnMatched: boolean = wordResultsTemp[0][
+              const isCharOnMatched = wordResultsTemp[0]["characters"].includes(
+                result.character
+              );
+              const isCharOnIncluded = wordResultsTemp[1][
                 "characters"
               ].includes(result.character);
-              const isCharOnIncluded: boolean = wordResultsTemp[1][
-                "characters"
-              ].includes(result.character);
-              const isCharOnNotIncluded: boolean = wordResultsTemp[2][
+              const isCharOnNotIncluded = wordResultsTemp[2][
                 "characters"
               ].includes(result.character);
 
@@ -149,7 +141,7 @@ function useKeyboard(
                   break;
               }
             });
-            let wordResultsTempWithSpace: Array<WordResultType> = wordResultsTemp.map(
+            const wordResultsTempWithSpace = wordResultsTemp.map(
               (wordResult: WordResultType) => {
                 return {
                   ...wordResult,
@@ -164,14 +156,14 @@ function useKeyboard(
             setInputValues(inputValuesTemp);
 
             // check if all result are matched
-            let isCorrectGuess: boolean = !results.some(
+            const isCorrectGuess = !results.some(
               (result) => result.result !== wordCompareResult.characterMatched
             );
             if (isCorrectGuess) {
               showToast("Great");
               setCurrentRow(-1);
             } else {
-              let totalNumOfRows: number = TOTAL_NUM_OF_ROW;
+              const totalNumOfRows = TOTAL_NUM_OF_ROW;
               if (currentRow === totalNumOfRows - 1) {
                 // users've used all chances -> show answer
                 showToast(selectedWord);

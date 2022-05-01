@@ -33,7 +33,7 @@ const Home: NextPage = () => {
       };
     })
   );
-  const keyboardRef: React.MutableRefObject<any> = useRef(null);
+  const keyboardRef = useRef(null);
 
   const selectedWord: string = useRandomWord();
   const { wordResults, onKeyPress } = useKeyboard(

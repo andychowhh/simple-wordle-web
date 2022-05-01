@@ -1,5 +1,5 @@
 import React from "react";
-import { render, RenderResult } from "@testing-library/react";
+import { render } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
 
 import Input from "./Input";
@@ -9,12 +9,10 @@ import { InputPropType } from "./input.type";
 import { wordCompareResult } from "@/constants/wordCompareResult";
 
 const setup = ({ value, status, isFlipped }: InputPropType) => {
-  const utils: RenderResult = render(
+  const utils = render(
     <Input value={value} status={status} isFlipped={isFlipped} />
   );
-  const input: HTMLElement = utils.getByLabelText(
-    isFlipped ? "flipped-input" : "input"
-  );
+  const input = utils.getByLabelText(isFlipped ? "flipped-input" : "input");
   return {
     input,
     ...utils,
@@ -24,7 +22,7 @@ const setup = ({ value, status, isFlipped }: InputPropType) => {
 describe("Testing Input component", () => {
   let input: HTMLInputElement;
   beforeEach(() => {
-    let props: InputPropType = {
+    const props = {
       value: "",
       status: undefined,
       isFlipped: false,
