@@ -2,6 +2,8 @@ import { wordCompareResult } from "@/constants/wordCompareResult";
 
 import { WordCompareResultType } from "@/types/types";
 
+import { WORDS } from "@/constants/wordList";
+
 type CheckType = {
   character: string;
   index: number;
@@ -22,8 +24,8 @@ export const wordCompare = (
 
   let result: Array<ResultType> = [];
   // put matched/included char in corresponding arrays
-  input.map((letter: string, i: number) => {
-    let targetArr: Array<string> = target.split("");
+  input.map((letter, i) => {
+    const targetArr = target.split("");
     if (targetArr[i] === letter) {
       matchedArr.push({
         character: letter,
@@ -40,7 +42,7 @@ export const wordCompare = (
   let targetArr: Array<string | null> = target.split("");
   // if matched, remove the element from the targetArr based on its index, and push it to result[]
   matchedArr.map((matched: CheckType) => {
-    let index: number = matched.index;
+    const index = matched.index;
     if (targetArr[index] !== null) {
       result.push({
         character: matched.character,
@@ -52,9 +54,7 @@ export const wordCompare = (
   });
   // if included, remove the element in targetArr after locating its index
   includedArr.map((included: CheckType) => {
-    let characterIndex: number = targetArr.findIndex(
-      (x) => x === included.character
-    );
+    const characterIndex = targetArr.findIndex((x) => x === included.character);
     if (characterIndex !== -1) {
       result.push({
         character: included.character,
@@ -65,22 +65,28 @@ export const wordCompare = (
     }
   });
 
-  let formattedResult: Array<WordCompareResultType> = input.map(
-    (ele: string, i: number) => {
-      let charResult: ResultType | undefined = result.find(
-        (resultItem: ResultType) => {
-          return resultItem.index === i;
-        }
-      );
-      let formattedCharResult: string = charResult
-        ? charResult.result
-        : wordCompareResult.characterNotIncluded;
+  let formattedResult: Array<WordCompareResultType> = input.map((ele, i) => {
+    const charResult: ResultType | undefined = result.find(
+      (resultItem: ResultType) => {
+        return resultItem.index === i;
+      }
+    );
+    const formattedCharResult = charResult
+      ? charResult.result
+      : wordCompareResult.characterNotIncluded;
 
-      return {
-        character: ele,
-        result: formattedCharResult,
-      };
-    }
-  );
+    return {
+      character: ele,
+      result: formattedCharResult,
+    };
+  });
   return formattedResult;
+};
+
+export const generateRandomWord = () => {
+  const wordFilteredByLength = WORDS.filter((word) => word.length === 5);
+  const randomWord = wordFilteredByLength[
+    Math.floor(Math.random() * wordFilteredByLength.length)
+  ].toUpperCase();
+  return randomWord;
 };

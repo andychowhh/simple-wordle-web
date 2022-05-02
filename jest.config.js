@@ -24,7 +24,8 @@ module.exports = {
     "^@/hooks/(.*)$": "<rootDir>/hooks/$1",
     "^@/constants/(.*)$": "<rootDir>/constants/$1",
     "^@/utils/(.*)$": "<rootDir>/utils/$1",
-    "^@/types/(.*)$": "<rootDir>/types/$1"
+    "^@/types/(.*)$": "<rootDir>/types/$1",
+    "^@/containers/(.*)$": "<rootDir>/containers/$1"
   },
   setupFilesAfterEnv: ['<rootDir>/jest.setup.js'],
   // Add more setup options before each test is run
