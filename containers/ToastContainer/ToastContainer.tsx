@@ -17,7 +17,7 @@ export const showToast = (text: string): void => {
 
 function ToastContainer({ children }: { children: JSX.Element }) {
   return (
-    <>
+    <div className="toast-container">
       <Container
         transition={Zoom}
         position="top-center"
@@ -39,7 +39,7 @@ function ToastContainer({ children }: { children: JSX.Element }) {
         }}
       />
       {children}
-    </>
+    </div>
   );
 }
 
