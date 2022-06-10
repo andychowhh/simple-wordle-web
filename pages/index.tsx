@@ -27,7 +27,7 @@ import { TOTAL_NUM_OF_ROW } from "@/constants/variables";
 const selectedWord = generateRandomWord();
 
 const Home: NextPage = () => {
-  const [inputValues, setInputValues] = useState<Array<InputValueType>>(
+  const [inputValues, setInputValues] = useState<InputValueType[]>(
     [...Array(TOTAL_NUM_OF_ROW)].map((_, index) => {
       return {
         id: index,
@@ -51,9 +51,9 @@ const Home: NextPage = () => {
     <ToastContainer>
       <div id={styles.home}>
         <div className={styles.input__group__container}>
-          {inputValues.map((inputValue: InputValueType) => {
-            return <InputGroup key={inputValue.id} inputValue={inputValue} />;
-          })}
+          {inputValues.map((inputValue: InputValueType) => (
+            <InputGroup key={inputValue.id} inputValue={inputValue} />
+          ))}
         </div>
         <KeyBoard
           wordResults={wordResults}

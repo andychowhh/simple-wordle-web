@@ -41,18 +41,16 @@ function InputGroup({ inputValue }: InputGroupPropType) {
     <animated.div
       className={inputGroupStyles.input__group}
       arial-label="input-group"
-      style={{ ...styles }}
+      style={styles}
     >
-      {[...Array(5)].map((_, index) => {
-        return (
-          <Input
-            key={index}
-            value={inputValue["value"][index]}
-            status={inputValue["status"][index]?.result}
-            isFlipped={inputValue["isFlipped"]}
-          />
-        );
-      })}
+      {[...Array(5)].map((_, index) => (
+        <Input
+          key={index}
+          value={inputValue["value"][index]}
+          status={inputValue["status"][index]?.result}
+          isFlipped={inputValue["isFlipped"]}
+        />
+      ))}
     </animated.div>
   );
 }

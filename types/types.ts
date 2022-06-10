@@ -12,9 +12,9 @@ export type WordResultType = {
 
 export type InputValueType = {
   id: number;
-  value: Array<string>;
+  value: string[];
   isFlipped: boolean;
-  status: Array<WordCompareResultType>;
+  status: WordCompareResultType[];
   isInvalid: boolean;
   errorMessage: string;
 };
