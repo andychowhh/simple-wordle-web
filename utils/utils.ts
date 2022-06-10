@@ -16,13 +16,13 @@ type ResultType = {
 };
 
 export const wordCompare = (
-  input: Array<string>,
+  input: string[],
   target: string
-): Array<WordCompareResultType> => {
-  let matchedArr: Array<CheckType> = [];
-  let includedArr: Array<CheckType> = [];
+): WordCompareResultType[] => {
+  let matchedArr: CheckType[] = [];
+  let includedArr: CheckType[] = [];
 
-  let result: Array<ResultType> = [];
+  let result: ResultType[] = [];
   // put matched/included char in corresponding arrays
   input.map((letter, i) => {
     const targetArr = target.split("");
@@ -65,7 +65,7 @@ export const wordCompare = (
     }
   });
 
-  let formattedResult: Array<WordCompareResultType> = input.map((ele, i) => {
+  let formattedResult: WordCompareResultType[] = input.map((ele, i) => {
     const charResult: ResultType | undefined = result.find(
       (resultItem: ResultType) => {
         return resultItem.index === i;
@@ -85,8 +85,9 @@ export const wordCompare = (
 
 export const generateRandomWord = () => {
   const wordFilteredByLength = WORDS.filter((word) => word.length === 5);
-  const randomWord = wordFilteredByLength[
-    Math.floor(Math.random() * wordFilteredByLength.length)
-  ].toUpperCase();
+  const randomWord =
+    wordFilteredByLength[
+      Math.floor(Math.random() * wordFilteredByLength.length)
+    ].toUpperCase();
   return randomWord;
 };

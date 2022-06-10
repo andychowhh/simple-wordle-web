@@ -9,7 +9,7 @@ import keyboardStyle from "./keyboard.module.scss";
 import "react-simple-keyboard/build/css/index.css";
 
 interface IProps {
-  wordResults: Array<WordResultType>;
+  wordResults: WordResultType[];
   onKeyPress: any;
   keyboardRef: MutableRefObject<any>;
 }
@@ -24,7 +24,7 @@ const KeyboardWrapper: FunctionComponent<IProps> = ({
   onKeyPress,
   keyboardRef,
 }) => {
-  let buttonTheme: Array<any> = wordResults
+  const buttonTheme: Array<any> = wordResults
     .map((wordResult) => {
       if (Boolean(wordResult.characters)) {
         let theme: ButtonThemeType | undefined = undefined;

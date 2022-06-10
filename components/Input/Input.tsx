@@ -7,8 +7,9 @@ import { wordCompareResult } from "@/constants/wordCompareResult";
 
 import inputStyles from "./input.module.scss";
 
-function Input(props: InputPropType) {
-  const { value, status, isFlipped } = props;
+const FLIP_SPEED = 2;
+
+function Input({ value, status, isFlipped }: InputPropType) {
   const inputFlippedClass =
     status === wordCompareResult.characterMatched
       ? inputStyles.input__matched
@@ -26,8 +27,8 @@ function Input(props: InputPropType) {
   return (
     <ReactCardFlip
       isFlipped={isFlipped}
-      flipSpeedBackToFront={2}
-      flipSpeedFrontToBack={2}
+      flipSpeedBackToFront={FLIP_SPEED}
+      flipSpeedFrontToBack={FLIP_SPEED}
     >
       <input
         {...getInputProps({
