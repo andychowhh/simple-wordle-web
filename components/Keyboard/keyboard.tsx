@@ -9,7 +9,7 @@ import keyboardStyle from "./keyboard.module.scss";
 import "react-simple-keyboard/build/css/index.css";
 
 interface IProps {
-  wordResults: Array<WordResultType>;
+  wordResults: WordResultType[];
   onKeyPress: any;
   keyboardRef: MutableRefObject<any>;
 }

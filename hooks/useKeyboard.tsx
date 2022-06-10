@@ -32,17 +32,17 @@ const DEFAULT_WORD_RESULTS = [
 
 function useKeyboard(
   selectedWord: string,
-  inputValues: Array<InputValueType>,
-  setInputValues: Dispatch<SetStateAction<Array<InputValueType>>>
+  inputValues: InputValueType[],
+  setInputValues: Dispatch<SetStateAction<InputValueType[]>>
 ) {
   const [currentRow, setCurrentRow] = useState<number>(0);
   // store wordResults for key color
   const [wordResults, setWordResults] =
-    useState<Array<WordResultType>>(DEFAULT_WORD_RESULTS);
+    useState<WordResultType[]>(DEFAULT_WORD_RESULTS);
 
   // executes when the input is invalid, e.g. Not enough letter/Not in word list
   const setInputValuesToInvalid = (
-    inputValues: Array<InputValueType>,
+    inputValues: InputValueType[],
     errorMsg: string
   ): void => {
     const temp = inputValues.map((inputValue) => {
