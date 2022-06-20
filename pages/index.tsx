@@ -25,7 +25,7 @@ import { generateRandomWord } from "@/utils/utils";
 import { TOTAL_NUM_OF_ROW } from "@/constants/variables";
 
 const selectedWord = generateRandomWord();
-// comment
+
 const Home: NextPage = () => {
   const [inputValues, setInputValues] = useState<InputValueType[]>(
     [...Array(TOTAL_NUM_OF_ROW)].map((_, index) => {
